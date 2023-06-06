@@ -1,0 +1,33 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 160px;
+    padding: 10px 24px;
+    border-radius: 104px;
+    transition: background-color .1s ease-in;
+
+    &:hover {
+        background-color: rgba(240, 242, 243, 0.5);
+    }
+
+    &.active {
+        .text {
+            font-weight: 470;
+        }
+    }
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    display: grid;
+    place-items: center;
+}
+
+.text {
+
+    &::first-letter {
+        text-transform: uppercase;
+    }
+}

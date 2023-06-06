@@ -1,0 +1,9 @@
+@import './reset', './variables';
+
+body {
+    background-color: var(--main-bg-color);
+}
+
+.cta {
+    cursor: pointer;
+}
