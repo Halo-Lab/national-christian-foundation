@@ -5,4 +5,15 @@
     max-width: 184px;
     border-top-left-radius: 24px;
     border-bottom-left-radius: 24px;
+    display: flex;
+    flex-direction: column;
+
+    >:first-child {
+        margin-left: 28px;
+    }
+
+    >:last-child {
+        margin-top: auto;
+        align-self: center;
+    }
 }
