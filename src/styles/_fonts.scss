@@ -1,0 +1,63 @@
+.title-h1 {
+    font-family: var(--font-family);
+    font-weight: 470;
+    font-size: 40px;
+    line-height: 145%;
+    color: var(--text-color);
+}
+
+.title-h2 {
+    font-family: var(--font-family);
+    font-weight: 470;
+    font-size: 28px;
+    line-height: 120%;
+    color: var(--text-color);
+}
+
+.title-h3 {
+    font-family: var(--font-family);
+    font-weight: 470;
+    font-size: 24px;
+    line-height: 130%;
+    color: var(--text-color);
+}
+
+.title-h4 {
+    font-family: var(--font-family);
+    font-weight: 470;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+    color: var(--text-color);
+}
+
+.text-m {
+    font-family: var(--font-family);
+    font-weight: 370;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+}
+
+.text-s {
+    font-family: var(--font-family);
+    font-weight: 370;
+    font-size: 14px;
+    line-height: 145%;
+    letter-spacing: 0.01em;
+    color: var(--text-color);
+}
+
+.text-xs {
+    font-family: var(--font-family);
+    font-weight: 370;
+    font-size: 12px;
+    line-height: 125%;
+    letter-spacing: 0.02em;
+    color: var(--text-color);
+}
+
+.bold {
+    font-weight: 470;
+}

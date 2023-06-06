@@ -8,7 +8,7 @@ const SidePanel = () => {
         <div className={styles.wrapper}>
             <Logo />
             <PagesList />
-            <Button text="Log Out" type="secondary" size="small" disabled />
+            <Button text="Log Out" type="secondary" size="small" />
         </div>
     );
 };

@@ -10,12 +10,6 @@
     &:hover {
         background-color: rgba(240, 242, 243, 0.5);
     }
-
-    &.active {
-        .text {
-            font-weight: 470;
-        }
-    }
 }
 
 .icon {
@@ -25,9 +19,6 @@
     place-items: center;
 }
 
-.text {
-
-    &::first-letter {
-        text-transform: uppercase;
-    }
+.text::first-letter {
+    text-transform: uppercase;
 }
