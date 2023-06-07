@@ -8,7 +8,7 @@
     position: relative;
 
     >p {
-        color: rgba(11, 27, 35, 0.6);
+        color: var(--text-grey-color);
     }
 
     &.active {

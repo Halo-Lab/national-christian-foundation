@@ -1,3 +1,27 @@
 .wrapper {
-    padding: 8px 56px 0;
+    padding: 8px 56px;
+}
+
+.container {
+    margin: 32px 0 56px;
+    display: flex;
+    gap: 32px;
+    height: 500px;
+}
+
+.leftSide,
+.rightSide {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.leftSide {
+    width: 67.6%;
+    background-color: rebeccapurple;
+}
+
+.rightSide {
+    width: 32.4%;
+    background-color: royalblue;
 }
