@@ -7,3 +7,11 @@ body {
 .cta {
     cursor: pointer;
 }
+
+.App {
+    display: flex;
+
+    >main {
+        width: 100%;
+    }
+}

@@ -7,8 +7,8 @@ import Grant from "../../assets/icons/Grant";
 import GrantFilled from "../../assets/icons/GrantFilled";
 import Give from "../../assets/icons/Give";
 import GiveFilled from "../../assets/icons/GiveFilled";
-import Favourites from "../../assets/icons/Favourites";
-import FavouritesFilled from "../../assets/icons/FavouritesFilled";
+import Favorites from "../../assets/icons/Favorites";
+import FavoritesFilled from "../../assets/icons/FavoritesFilled";
 import Activity from "../../assets/icons/Activity";
 import ActivityFilled from "../../assets/icons/ActivityFilled";
 import Legacy from "../../assets/icons/Legacy";
@@ -21,7 +21,7 @@ const PagesList = () => {
         { name: "home", icon: <Home />, activeIcon: <HomeFilled /> },
         { name: "grant", icon: <Grant />,activeIcon: <GrantFilled /> },
         { name: "give", icon: <Give />,activeIcon: <GiveFilled />  },
-        { name: "favourites", icon: <Favourites />,activeIcon: <FavouritesFilled />  },
+        { name: "Favorites", icon: <Favorites />,activeIcon: <FavoritesFilled />  },
         { name: "activity", icon: <Activity />,activeIcon: <ActivityFilled />  },
         { name: "legacy", icon: <Legacy />,activeIcon: <LegacyFilled />  },
     ];

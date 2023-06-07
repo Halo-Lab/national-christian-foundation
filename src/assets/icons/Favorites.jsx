@@ -1,4 +1,4 @@
-const Favourites = () => {
+const Favorites = () => {
     return (
         <svg
             width="18"
@@ -16,4 +16,4 @@ const Favourites = () => {
     );
 };
 
-export default Favourites;
+export default Favorites;
