@@ -10,6 +10,7 @@ import Microfinance from "assets/icons/Microfinance";
 import Document from "assets/icons/Document";
 import ContactUs from "assets/icons/ContactUs";
 import Moon from "assets/icons/Moon";
+import SettingsItem from "components/SettingsItem";
 
 const ProfileDropdown = ({ user, isActive }) => {
     const settings = {
@@ -39,18 +40,17 @@ const ProfileDropdown = ({ user, isActive }) => {
             </div>
             <ul className={styles.mainSettings}>
                 {settings.main.map((el, index) => (
-                    <li key={index} className={cn("cta", styles.settingsItem)}>
-                        <span className={styles.icon}>{el.icon}</span>
-                        <p className="text-m">{el.name}</p>
-                    </li>
+                    <SettingsItem title={el.name} icon={el.icon} key={index} />
                 ))}
             </ul>
             <ul className={styles.aditionalSettings}>
                 {settings.aditional.map((el, index) => (
-                    <li key={index} className={cn("cta", styles.settingsItem)}>
-                        <span className={styles.icon}>{el.icon}</span>
-                        <p className="text-m">{el.name}</p>
-                    </li>
+                    <SettingsItem
+                        title={el.name}
+                        icon={el.icon}
+                        aditional
+                        key={index}
+                    />
                 ))}
             </ul>
         </div>

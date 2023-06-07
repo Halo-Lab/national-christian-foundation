@@ -29,32 +29,9 @@
     padding: 8px 0;
 }
 
-.settingsItem {
-    padding: 8px 20px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    transition: background-color .1s ease-in;
-
-    &:hover {
-        background-color: rgba(240, 242, 243, 0.5);
-    }
-}
-
 .mainSettings {
     border-top: 1px solid #D8DDE0;
     border-bottom: 1px solid #D8DDE0;
-}
-
-.aditionalSettings {
-    >li>p {
-        color: #0B1B2399;
-    }
-
-    .icon>svg>path {
-        fill-opacity: 0.6;
-        stroke-opacity: 0.6;
-    }
 }
 
 .icon {
