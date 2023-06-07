@@ -1,14 +1,21 @@
 import styles from "./ProfileInfo.module.scss";
-import userAvatar from "../../assets/user-avatar.png";
 import cn from "classnames";
 import ChevronDown from "../../assets/icons/ChevronDown";
 import { useState } from "react";
+import ProfileDropdown from "components/ProfileDropdown";
+import UserAvatar from "components/UserAvatar";
 
 const ProfileInfo = () => {
     const [isDropdownActive, setIsDropdownActive] = useState(false);
     
+    const user = {
+        name: "Michael Jackson",
+        email: "michael@gmail.com",
+    };
+    const openDropdown = () => setIsDropdownActive(true);
+
     return (
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} onClick={openDropdown}>
             <div className={cn("cta", styles.balance)}>
                 <p className="text-m">
                     The sample family fund{" "}
@@ -18,9 +25,8 @@ const ProfileInfo = () => {
                     <ChevronDown />
                 </div>
             </div>
-            <div className={styles.avatar}>
-                <img src={userAvatar} alt="user avatar" />
-            </div>
+            <UserAvatar />
+            <ProfileDropdown user={user} isActive={isDropdownActive} />
         </div>
     );
 };

@@ -1,0 +1,53 @@
+.wrapper {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    background-color: var(--white-color);
+    box-shadow: 3px 4px 14px rgba(39, 37, 67, 0.12);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.2 ease-in;
+    pointer-events: none;
+
+    &.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+
+.userInfo {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.mainSettings,
+.aditionalSettings {
+    padding: 8px 0;
+}
+
+.settingsItem {
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: background-color .1s ease-in;
+
+    &:hover {
+        background-color: rgba(240, 242, 243, 0.5);
+    }
+}
+
+.mainSettings {
+    border-top: 1px solid #D8DDE0;
+    border-bottom: 1px solid #D8DDE0;
+}
+
+.aditionalSettings {
+    >li>p {
+        color: #0B1B2399;
+    }
+}
