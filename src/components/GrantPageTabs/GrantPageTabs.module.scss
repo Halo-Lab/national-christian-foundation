@@ -1,0 +1,35 @@
+.tabs {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.tabItem {
+    position: relative;
+
+    >p {
+        color: rgba(11, 27, 35, 0.6);
+    }
+
+    &.active {
+        >p {
+            color: var(--text-color);
+        }
+
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    &:before {
+        content: '';
+        width: 100%;
+        display: block;
+        position: absolute;
+        bottom: -8px;
+        height: 2px;
+        background-color: var(--dark-color);
+        transition: opacity .1s;
+        opacity: 0;
+    }
+}
