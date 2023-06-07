@@ -10,10 +10,10 @@ const ChevronDown = () => {
             <path
                 d="M1 1L6 6L11 1"
                 stroke="#0B1B23"
-                stroke-opacity="0.6"
-                stroke-width="1.2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeOpacity="0.6"
+                strokeWidth="1.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             />
         </svg>
     );
