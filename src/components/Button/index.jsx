@@ -9,9 +9,11 @@ const Button = ({ type, text, size = "large", icon, disabled }) => {
                 styles.button,
                 styles[type],
                 styles[size],
+                icon && styles.icon,
                 disabled && styles.disabled
             )}
         >
+            {icon && <div className={styles.iconWrapper}>{icon}</div>}
             {size === "large" ? (
                 <p className={cn(styles.text, "text-m bold")}>{text}</p>
             ) : (

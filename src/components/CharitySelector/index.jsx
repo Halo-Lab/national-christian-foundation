@@ -1,6 +1,8 @@
 import FavoriteCharitiesDropdown from "components/FavoriteCharitiesDropdown";
 import styles from "./CharitySelector.module.scss";
 import { favoriteOrganisations } from "data/charityOrganisations";
+import Button from "components/Button";
+import Search from "assets/icons/Search";
 
 const CharitySelector = ({ setSelectedOrganisation }) => {
     return (
@@ -12,7 +14,11 @@ const CharitySelector = ({ setSelectedOrganisation }) => {
                     setSelectedOrganisation={setSelectedOrganisation}
                 />
                 <p className="text-m">or</p>
-                Search button
+                <Button
+                    type={"secondary"}
+                    text={"Search for a charity"}
+                    icon={<Search />}
+                />
             </div>
         </div>
     );
