@@ -16,31 +16,40 @@
     }
 
     &.primary {
-        color: var(--white-color);
         background-color: var(--blue-color);
 
-        &:not(.disabled):hover {
+        >.text {
+            color: var(--white-color);
+        }
+
+        &:hover {
             background-color: #61BAD8;
         }
 
         &.disabled {
-            cursor: default;
             background-color: #BEC9D6;
         }
     }
 
     &.secondary {
         background-color: transparent;
-        color: var(--blue-color);
         border: 1px solid #D8DDE0;
 
-        &.disabled {
-            cursor: default;
+        >.text {
+            color: var(--blue-color);
+        }
+
+        &.disabled>.text {
             color: var(--text-grey-color);
         }
 
-        &:not(.disabled):hover {
+        &:hover {
             border-color: var(--blue-color);
         }
+    }
+
+    &.disabled {
+        pointer-events: none;
+        user-select: none;
     }
 }

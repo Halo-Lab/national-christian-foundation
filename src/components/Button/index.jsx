@@ -12,7 +12,11 @@ const Button = ({ type, text, size = "large", icon, disabled }) => {
                 disabled && styles.disabled
             )}
         >
-            <p className={styles.text}>{text}</p>
+            {size === "large" ? (
+                <p className={cn(styles.text, "text-m bold")}>{text}</p>
+            ) : (
+                <p className={cn(styles.text, "text-s bold")}>{text}</p>
+            )}
         </button>
     );
 };

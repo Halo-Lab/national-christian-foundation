@@ -1,0 +1,47 @@
+.button {
+    background-color: transparent;
+
+    &:hover {
+        .text {
+            color: var(--active-color);
+
+            &:before {
+                background-color: var(--active-color);
+            }
+        }
+    }
+
+    .text {
+        color: var(--blue-color);
+        position: relative;
+        transition: color .1s ease-in;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -4px;
+            background-color: var(--blue-color);
+            height: 1px;
+            width: 100%;
+            transition: background-color .1s ease-in;
+        }
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
+
+    &.disabled {
+        pointer-events: none;
+        user-select: none;
+
+        .text {
+            color: var(--text-grey-color);
+
+            &:before {
+                background-color: var(--text-grey-color);
+            }
+        }
+    }
+}

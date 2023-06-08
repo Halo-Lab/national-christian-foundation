@@ -6,10 +6,11 @@ import { recentlySupportedOrganisations } from "data/charityOrganisations";
 import CharitySelector from "components/CharitySelector";
 import { useState } from "react";
 import SelectedOrganisationInfo from "components/SelectedOrganisationInfo";
+import ButtonLink from "components/ButtonLink";
 
 const SelectCharity = () => {
     const [selectedOrganisation, setSelectedOrganisation] = useState(null);
-    
+
     const resetSelectedOrganisation = () => setSelectedOrganisation(null);
 
     return (
@@ -17,7 +18,10 @@ const SelectCharity = () => {
             <div className={styles.titleRow}>
                 <NumberedTitle number={1} title={"Select a charity"} />
                 {selectedOrganisation && (
-                    <p onClick={resetSelectedOrganisation}>Change</p>
+                    <ButtonLink
+                        text={"change"}
+                        onClickCallback={resetSelectedOrganisation}
+                    />
                 )}
             </div>
             {selectedOrganisation ? (
