@@ -1,7 +1,7 @@
 import styles from "./RecentlySupported.module.scss";
 import cn from "classnames";
 
-const RecentlySupported = ({ organisationList }) => {
+const RecentlySupported = ({ organisationList, setSelectedOrganisation }) => {
     return (
         <div className={styles.wrapper}>
             <h6 className="text-m bold">Recently supported</h6>
@@ -11,6 +11,9 @@ const RecentlySupported = ({ organisationList }) => {
                         <li
                             key={index}
                             className={cn("cta", styles.organisation)}
+                            onClick={() =>
+                                setSelectedOrganisation(organisation)
+                            }
                         >
                             <div className={styles.logo}>
                                 <img
