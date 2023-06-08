@@ -1,5 +1,4 @@
 import styles from "./NumberedTitle.module.scss";
-import cn from "classnames";
 
 const NumberedTitle = ({ title, number }) => {
     return (

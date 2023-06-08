@@ -1,8 +1,8 @@
-import Bell from "../../assets/icons/Bell";
-import Search from "../../assets/icons/Search";
-import ProfileInfo from "../ProfileInfo";
 import styles from "./Header.module.scss";
 import cn from "classnames";
+import ProfileInfo from "../ProfileInfo";
+import Bell from "assets/icons/Bell";
+import Search from "assets/icons/Search";
 
 const Header = () => {
     return (
