@@ -2,6 +2,7 @@ import GrantPageTabs from "components/GrantPageTabs";
 import styles from "./GrantPage.module.scss";
 import UserBalanceDisplay from "components/UserBalanceDisplay";
 import SelectCharity from "components/SelectCharity";
+import SuggestedCharities from "components/SuggestedCharities";
 
 const GrantPage = () => {
     return (
@@ -13,6 +14,7 @@ const GrantPage = () => {
                 </div>
                 <div className={styles.rightSide}>
                     <UserBalanceDisplay balance={"123,456.00"} />
+                    <SuggestedCharities />
                 </div>
             </div>
         </div>

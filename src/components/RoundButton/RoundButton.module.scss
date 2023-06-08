@@ -1,0 +1,29 @@
+.button {
+    background-color: #F0F2F3;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+
+    svg>path {
+        fill: var(--blue-color);
+    }
+
+    &.large {
+        width: 48px;
+
+        svg {
+            width: 18px;
+            height: 18px;
+        }
+    }
+
+    &.small {
+        width: 32px;
+
+        svg {
+            width: 14px;
+            height: 14px;
+        }
+    }
+}
