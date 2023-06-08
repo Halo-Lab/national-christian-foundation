@@ -1,0 +1,48 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    // overflow: hidden;
+}
+
+.organisationRow {
+    overflow-x: hidden;
+    position: relative;
+}
+
+.list {
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+    gap: 12px;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.organisation {
+    flex-shrink: 0;
+    padding: 4px 20px 4px 4px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #D8DDE0;
+    border-radius: 72px;
+    width: fit-content;
+    max-width: 204px;
+}
+
+.logo {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+
+    >img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+    }
+}
