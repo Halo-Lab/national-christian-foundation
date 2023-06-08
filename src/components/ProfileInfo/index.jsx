@@ -32,11 +32,7 @@ const ProfileInfo = () => {
     }, []);
 
     return (
-        <div
-            className={styles.wrapper}
-            onClick={openDropdown}
-            ref={dropdownRef}
-        >
+        <div className={styles.wrapper}>
             <div className={cn("cta", styles.balance)}>
                 <p className="text-m">
                     The sample family fund{" "}
@@ -46,12 +42,18 @@ const ProfileInfo = () => {
                     <ChevronDown />
                 </div>
             </div>
-            <UserAvatar />
-            <ProfileDropdown
-                user={user}
-                isActive={isDropdownActive}
-                setIsActive={setIsDropdownActive}
-            />
+            <div
+                className={cn("cta", styles.profile)}
+                onClick={openDropdown}
+                ref={dropdownRef}
+            >
+                <UserAvatar />
+                <ProfileDropdown
+                    user={user}
+                    isActive={isDropdownActive}
+                    setIsActive={setIsDropdownActive}
+                />
+            </div>
         </div>
     );
 };
