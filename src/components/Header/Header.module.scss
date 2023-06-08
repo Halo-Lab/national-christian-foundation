@@ -17,4 +17,10 @@
     border-radius: 100%;
     display: grid;
     place-items: center;
+    transition: border-color .2s;
+    border: 1px solid transparent;
+
+    &:hover {
+        border-color: var(--blue-color);
+    }
 }
