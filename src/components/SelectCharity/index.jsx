@@ -5,21 +5,36 @@ import RecentlySupported from "components/RecentlySupported";
 import { recentlySupportedOrganisations } from "data/charityOrganisations";
 import CharitySelector from "components/CharitySelector";
 import { useState } from "react";
+import SelectedOrganisationInfo from "components/SelectedOrganisationInfo";
 
 const SelectCharity = () => {
     const [selectedOrganisation, setSelectedOrganisation] = useState(null);
+    
+    const resetSelectedOrganisation = () => setSelectedOrganisation(null);
 
     return (
         <div className={cn("grant-bg", styles.wrapper)}>
-            <NumberedTitle number={1} title={"Select a charity"} />
-            <CharitySelector
-                setSelectedOrganisation={setSelectedOrganisation}
-            />
-            <RecentlySupported
-                organisationList={recentlySupportedOrganisations}
-                setSelectedOrganisation={setSelectedOrganisation}
-            />
-            {selectedOrganisation && <h2>{selectedOrganisation.name}</h2>}
+            <div className={styles.titleRow}>
+                <NumberedTitle number={1} title={"Select a charity"} />
+                {selectedOrganisation && (
+                    <p onClick={resetSelectedOrganisation}>Change</p>
+                )}
+            </div>
+            {selectedOrganisation ? (
+                <SelectedOrganisationInfo
+                    selectedOrganisation={selectedOrganisation}
+                />
+            ) : (
+                <>
+                    <CharitySelector
+                        setSelectedOrganisation={setSelectedOrganisation}
+                    />
+                    <RecentlySupported
+                        organisationList={recentlySupportedOrganisations}
+                        setSelectedOrganisation={setSelectedOrganisation}
+                    />
+                </>
+            )}
         </div>
     );
 };

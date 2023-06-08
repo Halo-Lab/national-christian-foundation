@@ -8,24 +8,77 @@ import bAndGWestTexasLogo from "assets/organisations-logo/b-and-g-west-texas.png
 import bAndGLanierLogo from "assets/organisations-logo/b-and-g-lanier.png";
 
 export const recentlySupportedOrganisations = [
-    { name: "Chino valley community church", logo: cvccLogo },
-    { name: "The salvation army", logo: salvationArmyLogo },
-    { name: "Serge (World Harvest Mission)", logo: sergeLogo },
-    { name: "The potter's house", logo: pottersHouseLogo },
-    { name: "Chino valley community church", logo: cvccLogo },
-    { name: "Serge (World Harvest Mission)", logo: sergeLogo },
+    {
+        name: "Chino valley community church",
+        logo: cvccLogo,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
+    },
+    {
+        name: "The salvation army",
+        logo: salvationArmyLogo,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
+    },
+    {
+        name: "Serge (World Harvest Mission)",
+        logo: sergeLogo,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
+    },
+    {
+        name: "The potter's house",
+        logo: pottersHouseLogo,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
+    },
+    {
+        name: "Chino valley community church",
+        logo: cvccLogo,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
+    },
+    {
+        name: "Serge (World Harvest Mission)",
+        logo: sergeLogo,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
+    },
 ];
 
 export const favoriteOrganisations = [
     {
         name: "ACE mentor program of greater Nashville, Inc.",
         logo: aceMentorLogo,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
     },
-    { name: "Boys & girls clubs of east texas", logo: bAndGEastTexasLogo },
-    { name: "Boys & girls clubs of west texas", logo: bAndGWestTexasLogo },
-    { name: "Boys & girls clubs of lanier", logo: bAndGLanierLogo },
-    { name: "Chino valley community church", logo: cvccLogo },
-    { name: "Serge (World Harvest Mission)", logo: sergeLogo },
-    { name: "The salvation army", logo: salvationArmyLogo },
-    { name: "The potter's house", logo: pottersHouseLogo },
+    {
+        name: "Boys & girls clubs of east texas",
+        logo: bAndGEastTexasLogo,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
+    },
+    {
+        name: "Boys & girls clubs of west texas",
+        logo: bAndGWestTexasLogo,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
+    },
+    {
+        name: "Boys & girls clubs of lanier",
+        logo: bAndGLanierLogo,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
+    },
+    {
+        name: "Chino valley community church",
+        logo: cvccLogo,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
+    },
+    {
+        name: "Serge (World Harvest Mission)",
+        logo: sergeLogo,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
+    },
+    {
+        name: "The salvation army",
+        logo: salvationArmyLogo,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
+    },
+    {
+        name: "The potter's house",
+        logo: pottersHouseLogo,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
+    },
 ];
