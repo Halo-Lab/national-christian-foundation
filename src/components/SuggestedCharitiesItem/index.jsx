@@ -2,6 +2,7 @@ import RoundButton from "components/RoundButton";
 import styles from "./SuggestedCharitiesItem.module.scss";
 import cn from "classnames";
 import Grant from "assets/icons/Grant";
+import GrantFilled from "assets/icons/GrantFilled";
 
 const SuggestedCharitiesItem = ({ organisation }) => {
     return (
@@ -22,8 +23,11 @@ const SuggestedCharitiesItem = ({ organisation }) => {
                         {organisation.city}
                     </p>
                 </div>
-
-                <RoundButton size="small" icon={<Grant />} />
+                <RoundButton
+                    size="small"
+                    icon={<Grant />}
+                    filledIcon={<GrantFilled />}
+                />
             </div>
         </div>
     );

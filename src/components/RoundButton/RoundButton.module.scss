@@ -4,6 +4,7 @@
     aspect-ratio: 1/1;
     display: grid;
     place-items: center;
+    position: relative;
 
     svg>path {
         fill: var(--blue-color);
@@ -26,4 +27,29 @@
             height: 14px;
         }
     }
+
+    &:hover {
+        .filledIcon {
+            opacity: 1;
+        }
+
+        .icon {
+            opacity: 0;
+        }
+    }
+}
+
+.icon,
+.filledIcon {
+    display: grid;
+    place-items: center;
+}
+
+.filledIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity .15s;
 }
