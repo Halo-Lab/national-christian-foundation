@@ -53,7 +53,7 @@ const FavoriteCharitiesDropdown = ({
                         </p>
                     </button>
                 </div>
-                <ul className={styles.organisationList}>
+                <ul className={styles.organisationsList}>
                     {organisationsList.map((organisation, index) => (
                         <li
                             className={cn("cta", styles.organisationItem)}
