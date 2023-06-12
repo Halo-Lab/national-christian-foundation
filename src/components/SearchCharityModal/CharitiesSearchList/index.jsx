@@ -1,10 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./CharitiesSearchList.module.scss";
-import {
-    organisationSearchList,
-    recentlySupportedOrganisations,
-} from "data/charityOrganisations";
-import CharitiesSearchItem from "components/CharitiesSearchItem";
+import { organisationSearchList } from "data/charityOrganisations";
+import CharitiesSearchItem from "components/SearchCharityModal/CharitiesSearchItem";
 import Search from "assets/icons/Search";
 
 const CharitiesSearchList = ({ query }) => {

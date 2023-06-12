@@ -1,9 +1,9 @@
 import Close from "assets/icons/Close";
 import styles from "./SearchCharityModal.module.scss";
 import cn from "classnames";
-import SearchBar from "components/SearchBar";
+import SearchBar from "components/SearchCharityModal/SearchBar";
 import { useRef, useState, useEffect } from "react";
-import CharitiesSearchList from "components/CharitiesSearchList";
+import CharitiesSearchList from "components/SearchCharityModal/CharitiesSearchList";
 
 const SearchCharityModal = ({ isModalActive, closeModal }) => {
     const [searchQuery, setSearchQuery] = useState("");

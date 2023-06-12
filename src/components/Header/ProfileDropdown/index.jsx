@@ -1,6 +1,6 @@
 import styles from "./ProfileDropdown.module.scss";
 import cn from "classnames";
-import UserAvatar from "components/UserAvatar";
+import UserAvatar from "components/Header/UserAvatar";
 import Edit from "assets/icons/Edit";
 import Email from "assets/icons/Email";
 import Card from "assets/icons/Card";
@@ -10,7 +10,7 @@ import Microfinance from "assets/icons/Microfinance";
 import Document from "assets/icons/Document";
 import ContactUs from "assets/icons/ContactUs";
 import Moon from "assets/icons/Moon";
-import SettingsItem from "components/SettingsItem";
+import SettingsItem from "components/Header/ProfileInfo/SettingsItem";
 
 const ProfileDropdown = ({ user, isActive }) => {
     const settings = {

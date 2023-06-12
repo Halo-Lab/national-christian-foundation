@@ -1,18 +1,18 @@
 import { useState } from "react";
-import PageTag from "../PageTag";
+import PageTag from "./PageTag";
 import styles from "./PagesList.module.scss";
-import Home from "../../assets/icons/Home";
-import HomeFilled from "../../assets/icons/HomeFilled";
-import Grant from "../../assets/icons/Grant";
-import GrantFilled from "../../assets/icons/GrantFilled";
-import Give from "../../assets/icons/Give";
-import GiveFilled from "../../assets/icons/GiveFilled";
-import Favorites from "../../assets/icons/Favorites";
-import FavoritesFilled from "../../assets/icons/FavoritesFilled";
-import Activity from "../../assets/icons/Activity";
-import ActivityFilled from "../../assets/icons/ActivityFilled";
-import Legacy from "../../assets/icons/Legacy";
-import LegacyFilled from "../../assets/icons/LegacyFilled";
+import Home from "../../../assets/icons/Home";
+import HomeFilled from "../../../assets/icons/HomeFilled";
+import Grant from "../../../assets/icons/Grant";
+import GrantFilled from "../../../assets/icons/GrantFilled";
+import Give from "../../../assets/icons/Give";
+import GiveFilled from "../../../assets/icons/GiveFilled";
+import Favorites from "../../../assets/icons/Favorites";
+import FavoritesFilled from "../../../assets/icons/FavoritesFilled";
+import Activity from "../../../assets/icons/Activity";
+import ActivityFilled from "../../../assets/icons/ActivityFilled";
+import Legacy from "../../../assets/icons/Legacy";
+import LegacyFilled from "../../../assets/icons/LegacyFilled";
 
 const PagesList = () => {
     const [activePage, setActivePage] = useState("grant");

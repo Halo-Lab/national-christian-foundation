@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import styles from "./ProfileInfo.module.scss";
 import cn from "classnames";
-import ChevronDown from "../../assets/icons/ChevronDown";
-import ProfileDropdown from "components/ProfileDropdown";
-import UserAvatar from "components/UserAvatar";
+import ChevronDown from "../../../assets/icons/ChevronDown";
+import ProfileDropdown from "components/Header/ProfileDropdown";
+import UserAvatar from "components/Header/UserAvatar";
 
 const ProfileInfo = () => {
     const [isDropdownActive, setIsDropdownActive] = useState(false);

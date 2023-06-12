@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CustomInput from "components/CustomInput";
+import CustomInput from "components/common/CustomInput";
 import styles from "./SearchBar.module.scss";
 import Search from "assets/icons/Search";
 import cn from "classnames";

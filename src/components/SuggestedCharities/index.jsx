@@ -1,7 +1,7 @@
 import styles from "./SuggestedCharities.module.scss";
 import cn from "classnames";
-import SuggestedCharitiesItem from "components/SuggestedCharitiesItem";
-import SupportedCategoryInfo from "components/SupportedCategoryInfo";
+import SuggestedCharitiesItem from "components/SuggestedCharities/SuggestedCharitiesItem";
+import SupportedCategoryInfo from "components/SuggestedCharities/SupportedCategoryInfo";
 import { suggestedCharitiesOrganisations } from "data/charityOrganisations";
 import Smile from "assets/icons/categories/Smile";
 

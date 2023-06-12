@@ -1,11 +1,11 @@
-import NumberedTitle from "components/NumberedTitle";
+import NumberedTitle from "components/common/NumberedTitle";
 import styles from "./SelectCharity.module.scss";
 import cn from "classnames";
-import RecentlySupportedSlider from "components/RecentlySupportedSlider";
+import RecentlySupportedSlider from "components/SelectCharity/RecentlySupportedSlider";
 import { recentlySupportedOrganisations } from "data/charityOrganisations";
-import CharitySelector from "components/CharitySelector";
-import SelectedOrganisationInfo from "components/SelectedOrganisationInfo";
-import ButtonLink from "components/ButtonLink";
+import CharitySelector from "components/SelectCharity/CharitySelector";
+import SelectedOrganisationInfo from "components/SelectCharity/SelectedOrganisationInfo";
+import ButtonLink from "components/common/ButtonLink";
 import { useOrganisationContext } from "context";
 
 const SelectCharity = () => {

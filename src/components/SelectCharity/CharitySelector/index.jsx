@@ -1,7 +1,7 @@
-import FavoriteCharitiesDropdown from "components/FavoriteCharitiesDropdown";
+import FavoriteCharitiesDropdown from "components/SelectCharity/FavoriteCharitiesDropdown";
 import styles from "./CharitySelector.module.scss";
 import { favoriteOrganisations } from "data/charityOrganisations";
-import SearchCharityButton from "components/SearchCharityButton";
+import SearchCharityButton from "components/SelectCharity/SearchCharityButton";
 
 const CharitySelector = () => {
     return (

@@ -1,6 +1,6 @@
 import Logo from "../../assets/Logo";
-import Button from "../Button";
-import PagesList from "../PagesList";
+import Button from "../common/Button";
+import PagesList from "./PagesList";
 import styles from "./SidePanel.module.scss";
 
 const SidePanel = () => {

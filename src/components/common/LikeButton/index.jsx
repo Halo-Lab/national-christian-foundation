@@ -1,4 +1,4 @@
-import RoundButton from "components/RoundButton";
+import RoundButton from "components/common/RoundButton";
 import Heart from "assets/icons/Heart";
 import { useOrganisationContext } from "context";
 import styles from "./LikeButton.module.scss";

@@ -1,9 +1,9 @@
 import MapPin from "assets/icons/MapPin";
 import styles from "./CharitiesSearchItem.module.scss";
 import cn from "classnames";
-import LikeButton from "components/LikeButton";
-import SelectCharityButton from "components/SelectCharityButton";
-import CharityCategory from "components/CharityCategory";
+import LikeButton from "components/common/LikeButton";
+import SelectCharityButton from "components/SelectCharity/SelectCharityButton";
+import CharityCategory from "components/SearchCharityModal/CharityCategory";
 
 const CharitiesSearchItem = ({ organisation }) => {
     return (

@@ -1,6 +1,6 @@
 import styles from "./SuggestedCharitiesItem.module.scss";
 import cn from "classnames";
-import SelectCharityButton from "components/SelectCharityButton";
+import SelectCharityButton from "components/SelectCharity/SelectCharityButton";
 
 const SuggestedCharitiesItem = ({ organisation }) => {
     return (

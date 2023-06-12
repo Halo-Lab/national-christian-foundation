@@ -1,5 +1,5 @@
 import { useOrganisationContext } from "context";
-import RoundButton from "components/RoundButton";
+import RoundButton from "components/common/RoundButton";
 import Grant from "assets/icons/Grant";
 import GrantFilled from "assets/icons/GrantFilled";
 
