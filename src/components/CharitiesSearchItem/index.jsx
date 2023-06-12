@@ -3,6 +3,7 @@ import styles from "./CharitiesSearchItem.module.scss";
 import cn from "classnames";
 import LikeButton from "components/LikeButton";
 import SelectCharityButton from "components/SelectCharityButton";
+import CharityCategory from "components/CharityCategory";
 
 const CharitiesSearchItem = ({ organisation }) => {
     return (
@@ -21,15 +22,12 @@ const CharitiesSearchItem = ({ organisation }) => {
                         </div>
                         <p className="text-m">{organisation.city}</p>
                     </div>
-                    <div className={styles.category}>
-                        <div className={styles.icon}></div>
-                        <p className="text-m">{organisation.category}</p>
-                    </div>
+                    <CharityCategory category={organisation.category} />
                 </div>
             </div>
             <div className={styles.buttons}>
                 <SelectCharityButton organisation={organisation} />
-                <LikeButton organisation={organisation}/>
+                <LikeButton organisation={organisation} />
             </div>
         </li>
     );

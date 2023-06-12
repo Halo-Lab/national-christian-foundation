@@ -32,6 +32,7 @@
 .content {
     display: flex;
     gap: 24px;
+    align-items: center;
 }
 
 .city,
@@ -44,7 +45,8 @@
         color: var(--text-grey-color);
     }
 }
-.buttons{
+
+.buttons {
     display: flex;
     gap: 8px;
 }

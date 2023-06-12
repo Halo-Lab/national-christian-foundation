@@ -3,7 +3,7 @@ import cn from "classnames";
 import SuggestedCharitiesItem from "components/SuggestedCharitiesItem";
 import SupportedCategoryInfo from "components/SupportedCategoryInfo";
 import { suggestedCharitiesOrganisations } from "data/charityOrganisations";
-import Smile from "assets/icons/Smile";
+import Smile from "assets/icons/categories/Smile";
 
 const SuggestedCharities = () => {
     const supportedCattegory = {

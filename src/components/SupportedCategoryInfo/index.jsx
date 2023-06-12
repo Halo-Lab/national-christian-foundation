@@ -31,7 +31,9 @@ const SupportedCategoryInfo = ({ category, categoryIcon, description }) => {
                 {isTooltipActive && (
                     <div className={styles.tooltip}>
                         <div className={styles.tooltipTitle}>
-                            <div className={styles.icon}>{categoryIcon}</div>
+                            <div className={styles.categoryIcon}>
+                                {categoryIcon}
+                            </div>
                             <p className="text-m bold">{category}</p>
                         </div>
                         <p className="text-s">{description}</p>

@@ -9,6 +9,7 @@ import bAndGLanierLogo from "assets/organisations-logo/b-and-g-lanier.png";
 import graceLogo from "assets/organisations-logo/grace.png";
 import secondCvccLogo from "assets/organisations-logo/cvcc-2.png";
 import aceLogo from "assets/organisations-logo/ace.png";
+import jaretLogo from "assets/organisations-logo/jaret.png";
 
 export const recentlySupportedOrganisations = [
     {
@@ -46,6 +47,66 @@ export const recentlySupportedOrganisations = [
         logo: sergeLogo,
         address: "14601 Peyton Dr Chino Hills, CA 91709",
         city: "Grand Rapids, MI",
+    },
+];
+
+export const organisationSearchList = [
+    {
+        name: "Chino valley community church",
+        logo: graceLogo,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
+        city: "Grand Rapids, MI",
+        id: 1,
+        category: "Children's and youth ministry",
+    },
+    {
+        name: "Jarrett's joy cart",
+        logo: jaretLogo,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
+        city: "Lexington, KY",
+        id: 2,
+        category: "Giving and generosity",
+    },
+    {
+        name: "The potter's house",
+        logo: pottersHouseLogo,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
+        city: "Grand Rapids, MI",
+        id: 3,
+        category: "Education",
+    },
+    {
+        name: "Grace ministries international",
+        logo: aceLogo,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
+        city: "Grand Rapids, MI",
+        id: 4,
+        category: "Spiritual development",
+    },
+    {
+        name: "Serge (World Harvest Mission)",
+        logo: sergeLogo,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
+        city: "Washington, DC",
+        id: 5,
+        category: "Evangelism and missions",
+    },
+
+    {
+        name: "Chino valley community church",
+        logo: graceLogo,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
+        city: "Grand Rapids, MI",
+        id: 6,
+        category: "Children's and youth ministry",
+    },
+    {
+        name: "The potter's house",
+        logo: pottersHouseLogo,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
+        city: "Grand Rapids, MI",
+        id: 7,
+        category: "Education",
     },
 ];
 
@@ -97,24 +158,24 @@ export const suggestedCharitiesOrganisations = [
         name: "Chino valley community church",
         logo: secondCvccLogo,
         city: "Grand Rapids, MI",
-        id: 1,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
     },
     {
         name: "Grace ministries International",
         logo: graceLogo,
         city: "Grand Rapids, MI",
-        id: 2,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
     },
     {
         name: "ACE mentor program of Greater Nashville, Inc.",
         logo: aceLogo,
         city: "Grand Rapids, MI",
-        id: 3,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
     },
     {
         name: "The potter's house",
         logo: pottersHouseLogo,
         city: "Grand Rapids, MI",
-        id: 4,
+        address: "14601 Peyton Dr Chino Hills, CA 91709",
     },
 ];

@@ -37,7 +37,7 @@ const SearchCharityModal = ({ isModalActive, closeModal }) => {
                 <SearchBar onSearch={handleSearch} />
                 <CharitiesSearchList query={searchQuery} />
             </div>
-            <div className={styles.scrollGradient}></div>
+            {/* <div className={styles.scrollGradient}></div> */}
         </div>
     );
 };

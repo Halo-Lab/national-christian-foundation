@@ -1,5 +1,11 @@
 .wrapper {
     padding: 8px 56px;
+    // overflow: scroll;
+    // height: fit-content;
+
+    // &::-webkit-scrollbar {
+    //     display: none;
+    // }
 }
 
 .container {

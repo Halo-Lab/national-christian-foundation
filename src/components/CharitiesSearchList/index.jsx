@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./CharitiesSearchList.module.scss";
 import {
-    suggestedCharitiesOrganisations,
+    organisationSearchList,
     recentlySupportedOrganisations,
 } from "data/charityOrganisations";
 import CharitiesSearchItem from "components/CharitiesSearchItem";
@@ -9,18 +9,18 @@ import Search from "assets/icons/Search";
 
 const CharitiesSearchList = ({ query }) => {
     const [filteredList, setFilteredList] = useState([
-        ...suggestedCharitiesOrganisations,
+        ...organisationSearchList,
     ]);
 
     useEffect(() => {
         query === ""
-            ? setFilteredList([...suggestedCharitiesOrganisations])
+            ? setFilteredList([...organisationSearchList])
             : filterOrganisationsByQuery(query);
     }, [query]);
 
     const filterOrganisationsByQuery = (query) => {
         setFilteredList(
-            suggestedCharitiesOrganisations.filter((organisation) =>
+            organisationSearchList.filter((organisation) =>
                 organisation.name.toLowerCase().includes(query.toLowerCase())
             )
         );
@@ -46,14 +46,12 @@ const CharitiesSearchList = ({ query }) => {
                     </div>
                     <h4 className="title-h4">Recently supported</h4>
                     <ul className={styles.list}>
-                        {recentlySupportedOrganisations.map(
-                            (organisation, index) => (
-                                <CharitiesSearchItem
-                                    organisation={organisation}
-                                    key={index}
-                                />
-                            )
-                        )}
+                        {organisationSearchList.map((organisation, index) => (
+                            <CharitiesSearchItem
+                                organisation={organisation}
+                                key={index}
+                            />
+                        ))}
                     </ul>
                 </>
             )}
