@@ -1,6 +1,7 @@
 import GrantPage from "components/pages/GrantPage";
 import Header from "./components/Header";
 import SidePanel from "./components/SidePanel";
+import Popup from "components/common/Popup";
 
 function App() {
     return (
@@ -10,6 +11,7 @@ function App() {
                 <Header />
                 <GrantPage />
             </main>
+            <Popup />
         </div>
     );
 }

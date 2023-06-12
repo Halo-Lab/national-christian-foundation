@@ -38,7 +38,7 @@ const Dropdown = ({
 
     useEffect(() => {
         if (selected !== selectedOption) setSelected("");
-    }, [selectedOption]);
+    }, [selectedOption, selected]);
 
     return (
         <div

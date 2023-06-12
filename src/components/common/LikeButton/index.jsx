@@ -4,18 +4,30 @@ import { useOrganisationContext } from "context";
 import styles from "./LikeButton.module.scss";
 
 const LikeButton = ({ organisation }) => {
-    const { favoritesList, setFavoritesList } = useOrganisationContext();
+    const {
+        favoritesList,
+        setFavoritesList,
+        setIsPopupActive,
+        lastFavoriteOrganisationName,
+    } = useOrganisationContext();
 
-    const addToFavorites = (organisation) => {
+    const toggleFavorite = (organisation) => {
         checkIsLiked(organisation)
             ? removeFromFavorites(organisation)
-            : setFavoritesList([...favoritesList, organisation]);
+            : addToFavorites(organisation);
     };
     const removeFromFavorites = (organisation) => {
         const updatedFavorites = favoritesList.filter(
             (favorite) => favorite.id !== organisation.id
         );
         setFavoritesList(updatedFavorites);
+        setIsPopupActive(false);
+    };
+
+    const addToFavorites = (organisation) => {
+        setIsPopupActive(true);
+        lastFavoriteOrganisationName.current = organisation.name;
+        setFavoritesList([...favoritesList, organisation]);
     };
     const checkIsLiked = (organisation) =>
         favoritesList.some((el) => el.id === organisation.id);
@@ -26,7 +38,7 @@ const LikeButton = ({ organisation }) => {
             icon={<Heart />}
             type="like"
             className={checkIsLiked(organisation) && styles.filled}
-            onClick={() => addToFavorites(organisation)}
+            onClick={() => toggleFavorite(organisation)}
         />
     );
 };

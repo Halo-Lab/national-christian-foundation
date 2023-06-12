@@ -1,0 +1,46 @@
+.wrapper {
+    background: #0BA1D8;
+    border-radius: 16px;
+    padding: 16px 16px 16px 20px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    gap: 20px;
+    transition: .3s ease-in;
+    transition-property: bottom, opacity;
+
+    &.hide {
+        opacity: 0;
+        bottom: -24px;
+    }
+
+    &.show {
+        opacity: 1;
+        bottom: 24px;
+    }
+
+    >p {
+        color: var(--white-color);
+        max-width: 325px;
+    }
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+
+    >svg {
+        width: 6px;
+        height: 6px;
+
+        >path {
+            fill: var(--white-color);
+        }
+    }
+}
