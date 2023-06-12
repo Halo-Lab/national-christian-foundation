@@ -3,7 +3,7 @@ import styles from "./FilterRow.module.scss";
 import { organisationSearchList } from "data/charityOrganisations";
 import { removeDuplicates } from "helpers/removeDuplicates";
 
-const FilterRow = ({ setSelectedOption }) => {
+const FilterRow = ({ selectedOption, setSelectedOption }) => {
     const categoryList = removeDuplicates(
         organisationSearchList.map((el) => el.category)
     );
@@ -21,16 +21,19 @@ const FilterRow = ({ setSelectedOption }) => {
                 <Dropdown
                     placeholder="City"
                     optionsList={citiesList}
+                    selectedOption={selectedOption}
                     setSelectedOption={setSelectedOption}
                 />
                 <Dropdown
                     placeholder="State"
                     optionsList={statesList}
+                    selectedOption={selectedOption}
                     setSelectedOption={setSelectedOption}
                 />
                 <Dropdown
                     placeholder="Cause"
                     optionsList={categoryList}
+                    selectedOption={selectedOption}
                     setSelectedOption={setSelectedOption}
                 />
             </div>

@@ -62,9 +62,11 @@ const SearchCharityModal = ({ isModalActive, closeModal }) => {
                 </div>
                 <SearchBar onSearch={handleSearch} />
                 {!searchQuery && (
-                    <FilterRow setSelectedOption={setSelectedOption} />
+                    <FilterRow
+                        selectedOption={selectedOption}
+                        setSelectedOption={setSelectedOption}
+                    />
                 )}
-
                 <CharitiesSearchList
                     query={searchQuery}
                     selectedOption={selectedOption}

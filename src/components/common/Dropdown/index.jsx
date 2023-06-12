@@ -3,7 +3,12 @@ import styles from "./Dropdown.module.scss";
 import cn from "classnames";
 import ChevronDown from "assets/icons/ChevronDown";
 
-const Dropdown = ({ placeholder, optionsList, setSelectedOption }) => {
+const Dropdown = ({
+    placeholder,
+    optionsList,
+    selectedOption,
+    setSelectedOption,
+}) => {
     const [isActive, setIsActive] = useState(false);
     const [selected, setSelected] = useState("");
     const dropdownRef = useRef(null);
@@ -31,6 +36,10 @@ const Dropdown = ({ placeholder, optionsList, setSelectedOption }) => {
         };
     }, []);
 
+    useEffect(() => {
+        if (selected !== selectedOption) setSelected("");
+    }, [selectedOption]);
+
     return (
         <div
             className={cn("cta", styles.wrapper, isActive && styles.active)}
@@ -56,7 +65,9 @@ const Dropdown = ({ placeholder, optionsList, setSelectedOption }) => {
                         onClick={() => selectOption(el)}
                         key={index}
                     >
-                        <p className="text-m">{el}</p>
+                        <p className={cn("text-m", selected === el && "bold")}>
+                            {el}
+                        </p>
                     </li>
                 ))}
             </ul>
