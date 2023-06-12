@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import styles from "./FavoriteCharitiesDropdown.module.scss";
 import cn from "classnames";
 import ChevronDown from "assets/icons/ChevronDown";
@@ -10,6 +10,25 @@ const FavoriteCharitiesDropdown = ({
 }) => {
     const [isActive, setIsActive] = useState(false);
     const [isSorted, setIsSorted] = useState(false);
+    const dropdownRef = useRef(null);
+
+    useEffect(() => {
+        const handleMissClick = (event) => {
+            if (
+                dropdownRef.current &&
+                !dropdownRef.current.contains(event.target)
+            )
+                setIsActive(false);
+        };
+
+        document.addEventListener("click", handleMissClick);
+
+        return () => {
+            document.removeEventListener("click", handleMissClick);
+        };
+    }, []);
+
+    const openDropdown = () => setIsActive(true);
 
     const sortOrganisationsByName = (e) => {
         e.stopPropagation();
@@ -33,7 +52,8 @@ const FavoriteCharitiesDropdown = ({
     return (
         <div
             className={cn("cta", styles.wrapper, isActive && styles.active)}
-            onClick={() => setIsActive(!isActive)}
+            onClick={openDropdown}
+            ref={dropdownRef}
         >
             <p className={cn("text-m", styles.placeholder)}>
                 My favorite charities

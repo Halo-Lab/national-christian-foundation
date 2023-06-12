@@ -1,0 +1,25 @@
+.wrapper {
+    position: relative;
+}
+
+.resetBtn {
+    border-radius: 50%;
+    border: 1px solid rgba(11, 27, 35, 0.6);
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    transform: translateY(-50%);
+    display: grid;
+    place-items: center;
+
+    >svg {
+        width: 6px;
+        height: 6px;
+
+        >path {
+            fill: var(--dark-color);
+        }
+    }
+}

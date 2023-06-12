@@ -15,31 +15,37 @@ export const recentlySupportedOrganisations = [
         name: "Chino valley community church",
         logo: cvccLogo,
         address: "14601 Peyton Dr Chino Hills, CA 91709",
+        city: "Grand Rapids, MI",
     },
     {
         name: "The salvation army",
         logo: salvationArmyLogo,
         address: "14601 Peyton Dr Chino Hills, CA 91709",
+        city: "Grand Rapids, MI",
     },
     {
         name: "Serge (World Harvest Mission)",
         logo: sergeLogo,
         address: "14601 Peyton Dr Chino Hills, CA 91709",
+        city: "Grand Rapids, MI",
     },
     {
         name: "The potter's house",
         logo: pottersHouseLogo,
         address: "14601 Peyton Dr Chino Hills, CA 91709",
+        city: "Grand Rapids, MI",
     },
     {
         name: "Chino valley community church",
         logo: cvccLogo,
         address: "14601 Peyton Dr Chino Hills, CA 91709",
+        city: "Grand Rapids, MI",
     },
     {
         name: "Serge (World Harvest Mission)",
         logo: sergeLogo,
         address: "14601 Peyton Dr Chino Hills, CA 91709",
+        city: "Grand Rapids, MI",
     },
 ];
 
