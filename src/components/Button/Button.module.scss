@@ -7,6 +7,10 @@
     transition-property: border-color,
         background-color;
 
+    >p {
+        white-space: nowrap;
+    }
+
     &.large {
         padding: 13.5px 20px;
     }

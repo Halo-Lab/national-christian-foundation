@@ -1,7 +1,7 @@
 import styles from "./Button.module.scss";
 import cn from "classnames";
 
-const Button = ({ type, text, size = "large", icon, disabled }) => {
+const Button = ({ type, text, size = "large", icon, disabled, onClick }) => {
     return (
         <button
             className={cn(
@@ -12,6 +12,7 @@ const Button = ({ type, text, size = "large", icon, disabled }) => {
                 icon && styles.icon,
                 disabled && styles.disabled
             )}
+            onClick={onClick}
         >
             {icon && <div className={styles.iconWrapper}>{icon}</div>}
             {size === "large" ? (

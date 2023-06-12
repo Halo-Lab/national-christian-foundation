@@ -1,14 +1,32 @@
+import Arrow from "assets/icons/Arrow";
 import styles from "./RecentlySupported.module.scss";
 import cn from "classnames";
+import { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
 
 const RecentlySupported = ({ organisationList, setSelectedOrganisation }) => {
+    const [isEnd, setIsEnd] = useState(false);
+    const [isBeginning, setIsBeginning] = useState(true);
+
     return (
         <div className={styles.wrapper}>
             <h6 className="text-m bold">Recently supported</h6>
-            <div className={styles.organisationsRow}>
-                <ul className={styles.list}>
+            <div className={styles.row}>
+                <Swiper
+                    slidesPerView="auto"
+                    spaceBetween={12}
+                    scrollbar={{ draggable: true }}
+                    className={styles.slider}
+                    navigation={{
+                        prevEl: ".prev-btn",
+                        nextEl: ".next-btn",
+                    }}
+                    modules={[Navigation]}
+                    onSlideChange={(swiper) => console.log(swiper.realIndex)}
+                >
                     {organisationList.map((organisation, index) => (
-                        <li
+                        <SwiperSlide
                             key={index}
                             className={cn("cta", styles.organisation)}
                             onClick={() =>
@@ -22,9 +40,19 @@ const RecentlySupported = ({ organisationList, setSelectedOrganisation }) => {
                                 />
                             </div>
                             <p className="text-xs">{organisation.name}</p>
-                        </li>
+                        </SwiperSlide>
                     ))}
-                </ul>
+                </Swiper>
+                <button
+                    className={cn("cta prev-btn", styles.btn, styles.leftBtn)}
+                >
+                    <Arrow />
+                </button>
+                <button
+                    className={cn("cta next-btn", styles.btn, styles.rightBtn)}
+                >
+                    <Arrow />
+                </button>
             </div>
         </div>
     );

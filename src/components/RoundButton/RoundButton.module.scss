@@ -6,9 +6,18 @@
     place-items: center;
     position: relative;
 
-    svg>path {
-        fill: var(--blue-color);
+    &.grant {
+        svg>path {
+            fill: var(--blue-color);
+        }
     }
+
+    &.like {
+        svg>path {
+            stroke: var(--blue-color);
+        }
+    }
+
 
     &.large {
         width: 48px;
@@ -28,13 +37,15 @@
         }
     }
 
-    &:hover {
-        .filledIcon {
-            opacity: 1;
-        }
+    &:not(.like) {
+        &:hover {
+            .filledIcon {
+                opacity: 1;
+            }
 
-        .icon {
-            opacity: 0;
+            .icon {
+                opacity: 0;
+            }
         }
     }
 }
