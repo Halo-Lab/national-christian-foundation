@@ -4,10 +4,12 @@ import cn from "classnames";
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
+import { useOrganisationContext } from "context";
 
-const RecentlySupported = ({ organisationList, setSelectedOrganisation }) => {
-    const [isEnd, setIsEnd] = useState(false);
-    const [isBeginning, setIsBeginning] = useState(true);
+const RecentlySupported = ({ organisationList }) => {
+    const { setSelectedOrganisation } = useOrganisationContext();
+    // const [isEnd, setIsEnd] = useState(false);
+    // const [isBeginning, setIsBeginning] = useState(true);
 
     return (
         <div className={styles.wrapper}>

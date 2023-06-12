@@ -12,13 +12,6 @@
         }
     }
 
-    &.like {
-        svg>path {
-            stroke: var(--blue-color);
-        }
-    }
-
-
     &.large {
         width: 48px;
 
@@ -63,4 +56,12 @@
     transform: translate(-50%, -50%);
     opacity: 0;
     transition: opacity .15s;
+}
+
+.like {
+    svg>path {
+        transition: .2s ease-in;
+        transition-property: stroke, fill;
+        stroke: var(--blue-color);
+    }
 }

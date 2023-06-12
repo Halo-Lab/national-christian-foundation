@@ -1,10 +1,8 @@
 import MapPin from "assets/icons/MapPin";
 import styles from "./CharitiesSearchItem.module.scss";
 import cn from "classnames";
-import RoundButton from "components/RoundButton";
-import Grant from "assets/icons/Grant";
-import GrantFilled from "assets/icons/GrantFilled";
 import LikeButton from "components/LikeButton";
+import SelectCharityButton from "components/SelectCharityButton";
 
 const CharitiesSearchItem = ({ organisation }) => {
     return (
@@ -30,12 +28,8 @@ const CharitiesSearchItem = ({ organisation }) => {
                 </div>
             </div>
             <div className={styles.buttons}>
-                <RoundButton
-                    size="small"
-                    icon={<Grant />}
-                    filledIcon={<GrantFilled />}
-                />
-                <LikeButton />
+                <SelectCharityButton organisation={organisation} />
+                <LikeButton organisation={organisation}/>
             </div>
         </li>
     );

@@ -7,6 +7,8 @@ const RoundButton = ({
     filledIcon,
     disabled,
     type = "grant",
+    className,
+    onClick,
 }) => {
     return (
         <button
@@ -15,8 +17,10 @@ const RoundButton = ({
                 styles.button,
                 styles[size],
                 styles[type],
+                className,
                 disabled && styles.disabled
             )}
+            onClick={onClick}
         >
             {type.toLowerCase() !== "like" && (
                 <div className={styles.filledIcon}>{filledIcon}</div>

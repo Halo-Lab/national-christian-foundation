@@ -3,11 +3,10 @@ import styles from "./FavoriteCharitiesDropdown.module.scss";
 import cn from "classnames";
 import ChevronDown from "assets/icons/ChevronDown";
 import Transfer from "assets/icons/Transfer";
+import { useOrganisationContext } from "context";
 
-const FavoriteCharitiesDropdown = ({
-    organisationsList,
-    setSelectedOrganisation,
-}) => {
+const FavoriteCharitiesDropdown = ({ organisationsList }) => {
+    const { setSelectedOrganisation } = useOrganisationContext();
     const [isActive, setIsActive] = useState(false);
     const [isSorted, setIsSorted] = useState(false);
     const dropdownRef = useRef(null);

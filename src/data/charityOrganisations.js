@@ -97,20 +97,24 @@ export const suggestedCharitiesOrganisations = [
         name: "Chino valley community church",
         logo: secondCvccLogo,
         city: "Grand Rapids, MI",
+        id: 1,
     },
     {
         name: "Grace ministries International",
         logo: graceLogo,
         city: "Grand Rapids, MI",
+        id: 2,
     },
     {
         name: "ACE mentor program of Greater Nashville, Inc.",
         logo: aceLogo,
         city: "Grand Rapids, MI",
+        id: 3,
     },
     {
         name: "The potter's house",
         logo: pottersHouseLogo,
         city: "Grand Rapids, MI",
+        id: 4,
     },
 ];

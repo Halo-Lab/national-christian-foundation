@@ -1,0 +1,6 @@
+.filled {
+    svg>path {
+        fill: var(--heart-like-color);
+        stroke: var(--heart-like-color);
+    }
+}

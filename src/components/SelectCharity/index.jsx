@@ -4,12 +4,13 @@ import cn from "classnames";
 import RecentlySupported from "components/RecentlySupported";
 import { recentlySupportedOrganisations } from "data/charityOrganisations";
 import CharitySelector from "components/CharitySelector";
-import { useState } from "react";
 import SelectedOrganisationInfo from "components/SelectedOrganisationInfo";
 import ButtonLink from "components/ButtonLink";
+import { useOrganisationContext } from "context";
 
 const SelectCharity = () => {
-    const [selectedOrganisation, setSelectedOrganisation] = useState(null);
+    const { selectedOrganisation, setSelectedOrganisation } =
+        useOrganisationContext();
 
     const resetSelectedOrganisation = () => setSelectedOrganisation(null);
 
@@ -30,12 +31,9 @@ const SelectCharity = () => {
                 />
             ) : (
                 <>
-                    <CharitySelector
-                        setSelectedOrganisation={setSelectedOrganisation}
-                    />
+                    <CharitySelector />
                     <RecentlySupported
                         organisationList={recentlySupportedOrganisations}
-                        setSelectedOrganisation={setSelectedOrganisation}
                     />
                 </>
             )}

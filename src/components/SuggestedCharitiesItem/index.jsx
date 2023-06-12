@@ -1,8 +1,6 @@
-import RoundButton from "components/RoundButton";
 import styles from "./SuggestedCharitiesItem.module.scss";
 import cn from "classnames";
-import Grant from "assets/icons/Grant";
-import GrantFilled from "assets/icons/GrantFilled";
+import SelectCharityButton from "components/SelectCharityButton";
 
 const SuggestedCharitiesItem = ({ organisation }) => {
     return (
@@ -13,7 +11,6 @@ const SuggestedCharitiesItem = ({ organisation }) => {
                     alt={organisation.name + " logo"}
                 />
             </div>
-
             <div className={styles.content}>
                 <div className={styles.text}>
                     <p className={cn("text-m bold", styles.name)}>
@@ -23,11 +20,7 @@ const SuggestedCharitiesItem = ({ organisation }) => {
                         {organisation.city}
                     </p>
                 </div>
-                <RoundButton
-                    size="small"
-                    icon={<Grant />}
-                    filledIcon={<GrantFilled />}
-                />
+                <SelectCharityButton organisation={organisation} />
             </div>
         </div>
     );
