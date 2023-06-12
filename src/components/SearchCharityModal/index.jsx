@@ -2,12 +2,15 @@ import Close from "assets/icons/Close";
 import styles from "./SearchCharityModal.module.scss";
 import cn from "classnames";
 import SearchBar from "components/SearchBar";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import CharitiesSearchList from "components/CharitiesSearchList";
 
 const SearchCharityModal = ({ isModalActive, closeModal }) => {
     const [searchQuery, setSearchQuery] = useState("");
+    const [isBottom, setIsBottom] = useState(false);
+
     const modalRef = useRef(null);
+
     const handleSearch = (query) => {
         setSearchQuery(query);
     };
@@ -19,6 +22,27 @@ const SearchCharityModal = ({ isModalActive, closeModal }) => {
         )
             closeModal();
     };
+
+    useEffect(() => {
+        const element = modalRef.current;
+
+        const handleScroll = () => {
+            if (element) {
+                const { scrollTop, clientHeight, scrollHeight } = element;
+
+                Math.round(scrollTop + clientHeight) >= scrollHeight - 40
+                    ? setIsBottom(true)
+                    : setIsBottom(false);
+            }
+        };
+
+        element?.addEventListener("scroll", handleScroll);
+
+        return () => {
+            element?.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
         <div
             className={cn(styles.wrapper, isModalActive && styles.active)}
@@ -37,7 +61,9 @@ const SearchCharityModal = ({ isModalActive, closeModal }) => {
                 <SearchBar onSearch={handleSearch} />
                 <CharitiesSearchList query={searchQuery} />
             </div>
-            {/* <div className={styles.scrollGradient}></div> */}
+            <div
+                className={cn(styles.scrollGradient, isBottom && styles.hide)}
+            ></div>
         </div>
     );
 };

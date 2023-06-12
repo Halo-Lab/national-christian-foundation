@@ -4,7 +4,6 @@
     left: 0;
     z-index: 10;
     width: 100vw;
-    // height: 100vh;
     min-height: 100vh;
     background-color: rgba(11, 27, 35, 0.7);
     backdrop-filter: blur(1.5px);
@@ -19,6 +18,15 @@
 
         >.modal {
             transform: translateX(0);
+        }
+
+        >.scrollGradient {
+            transition: opacity .2s ease-in .2s;
+            opacity: 1;
+
+            &.hide {
+                opacity: 0;
+            }
         }
     }
 }
@@ -45,12 +53,13 @@
     justify-content: space-between;
 }
 
-// .scrollGradient {
-//     background: linear-gradient(178.02deg, rgba(255, 255, 255, 0) -8.52%, #FFFFFF 50%);
-//     position: fixed;
-//     width: 40%;
-//     max-width: 590px;
-//     height: 80px;
-//     bottom: 0;
-//     right: 0;
-// }
+.scrollGradient {
+    background: linear-gradient(178.02deg, rgba(255, 255, 255, 0) -8.52%, #FFFFFF 50%);
+    position: fixed;
+    width: 40%;
+    max-width: 590px;
+    height: 80px;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+}
