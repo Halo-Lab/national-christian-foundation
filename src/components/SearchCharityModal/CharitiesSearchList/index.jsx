@@ -18,7 +18,6 @@ const CharitiesSearchList = ({ query, selectedOption }) => {
     useEffect(() => {
         if (selectedOption) {
             setFilteredList([...filterBySelectedOption(selectedOption)]);
-            console.log(selectedOption);
         }
     }, [selectedOption]);
 
@@ -40,14 +39,17 @@ const CharitiesSearchList = ({ query, selectedOption }) => {
     return (
         <>
             {filteredList.length > 0 ? (
-                <ul className={styles.list}>
-                    {filteredList.map((organisation, index) => (
-                        <CharitiesSearchItem
-                            organisation={organisation}
-                            key={index}
-                        />
-                    ))}
-                </ul>
+                <>
+                    {query && <h4 className="title-h4">Search result</h4>}
+                    <ul className={styles.list}>
+                        {filteredList.map((organisation, index) => (
+                            <CharitiesSearchItem
+                                organisation={organisation}
+                                key={index}
+                            />
+                        ))}
+                    </ul>
+                </>
             ) : (
                 <>
                     <div className={styles.placeholder}>
