@@ -34,10 +34,7 @@ const ProfileInfo = () => {
     return (
         <div className={styles.wrapper}>
             <div className={cn("cta", styles.balance)}>
-                <p className="text-m">
-                    The sample family fund{" "}
-                    <span className="text-m bold">$123,456</span>
-                </p>
+                <p className="text-m">The sample family fund</p>
                 <div className={styles.chevron}>
                     <ChevronDown />
                 </div>

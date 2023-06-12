@@ -90,7 +90,6 @@ const FavoriteCharitiesDropdown = ({ organisationsList }) => {
                             <p className="text-m">{organisation.name}</p>
                         </li>
                     ))}
-                    <li></li>
                 </ul>
             </div>
         </div>
