@@ -4,7 +4,7 @@ import { organisationSearchList } from "data/charityOrganisations";
 import CharitiesSearchItem from "components/SearchCharityModal/CharitiesSearchItem";
 import Search from "assets/icons/Search";
 
-const CharitiesSearchList = ({ query }) => {
+const CharitiesSearchList = ({ query, selectedOption }) => {
     const [filteredList, setFilteredList] = useState([
         ...organisationSearchList,
     ]);
@@ -14,6 +14,21 @@ const CharitiesSearchList = ({ query }) => {
             ? setFilteredList([...organisationSearchList])
             : filterOrganisationsByQuery(query);
     }, [query]);
+
+    useEffect(() => {
+        if (selectedOption) {
+            setFilteredList([...filterBySelectedOption(selectedOption)]);
+            console.log(selectedOption);
+        }
+    }, [selectedOption]);
+
+    const filterBySelectedOption = (option) =>
+        organisationSearchList.filter(
+            (organisation) =>
+                organisation.category === option ||
+                organisation.city === option ||
+                organisation.state === option
+        );
 
     const filterOrganisationsByQuery = (query) => {
         setFilteredList(

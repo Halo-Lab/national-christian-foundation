@@ -3,7 +3,7 @@ import styles from "./CharitiesSearchItem.module.scss";
 import cn from "classnames";
 import LikeButton from "components/common/LikeButton";
 import SelectCharityButton from "components/SelectCharity/SelectCharityButton";
-import CharityCategory from "components/SearchCharityModal/CharityCategory";
+import CharityCategory from "components/SearchCharityModal/CharitiesSearchItem/CharityCategory";
 
 const CharitiesSearchItem = ({ organisation }) => {
     return (
@@ -20,7 +20,9 @@ const CharitiesSearchItem = ({ organisation }) => {
                         <div className={styles.icon}>
                             <MapPin />
                         </div>
-                        <p className="text-m">{organisation.city}</p>
+                        <p className="text-m">
+                            {organisation.city + ", " + organisation.state}
+                        </p>
                     </div>
                     <CharityCategory category={organisation.category} />
                 </div>

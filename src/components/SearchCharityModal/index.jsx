@@ -4,9 +4,11 @@ import cn from "classnames";
 import SearchBar from "components/SearchCharityModal/SearchBar";
 import { useRef, useState, useEffect } from "react";
 import CharitiesSearchList from "components/SearchCharityModal/CharitiesSearchList";
+import FilterRow from "./FilterRow";
 
 const SearchCharityModal = ({ isModalActive, closeModal }) => {
     const [searchQuery, setSearchQuery] = useState("");
+    const [selectedOption, setSelectedOption] = useState();
     const [isBottom, setIsBottom] = useState(false);
 
     const modalRef = useRef(null);
@@ -59,7 +61,14 @@ const SearchCharityModal = ({ isModalActive, closeModal }) => {
                     </div>
                 </div>
                 <SearchBar onSearch={handleSearch} />
-                <CharitiesSearchList query={searchQuery} />
+                {!searchQuery && (
+                    <FilterRow setSelectedOption={setSelectedOption} />
+                )}
+
+                <CharitiesSearchList
+                    query={searchQuery}
+                    selectedOption={selectedOption}
+                />
             </div>
             <div
                 className={cn(styles.scrollGradient, isBottom && styles.hide)}

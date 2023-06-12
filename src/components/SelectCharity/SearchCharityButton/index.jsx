@@ -1,4 +1,3 @@
-import styles from "./SearchCharityButton.module.scss";
 import Button from "components/common/Button";
 import Search from "assets/icons/Search";
 import { useState } from "react";
