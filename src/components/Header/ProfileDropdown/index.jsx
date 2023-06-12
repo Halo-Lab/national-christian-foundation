@@ -10,7 +10,7 @@ import Microfinance from "assets/icons/Microfinance";
 import Document from "assets/icons/Document";
 import ContactUs from "assets/icons/ContactUs";
 import Moon from "assets/icons/Moon";
-import SettingsItem from "components/Header/ProfileInfo/SettingsItem";
+import SettingsItem from "components/Header/ProfileDropdown/SettingsItem";
 
 const ProfileDropdown = ({ user, isActive }) => {
     const settings = {

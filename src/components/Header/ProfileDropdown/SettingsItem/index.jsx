@@ -1,3 +1,4 @@
+import ThemeToggle from "components/Header/ThemeToggle";
 import styles from "./SettingsItem.module.scss";
 import cn from "classnames";
 
@@ -12,6 +13,11 @@ const SettingsItem = ({ title, icon, aditional = false }) => {
         >
             <span className={styles.icon}>{icon}</span>
             <p className="text-m">{title}</p>
+            {title.toLowerCase() === "dark mode" && (
+                <div className={styles.themeToggle}>
+                    <ThemeToggle />
+                </div>
+            )}
         </li>
     );
 };
