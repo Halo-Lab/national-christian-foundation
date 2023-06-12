@@ -4,16 +4,10 @@
     gap: 16px;
 }
 
-.organisationRow {
-    overflow-x: hidden;
-    position: relative;
-}
-
 .slider {
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: hidden;
     position: relative;
-
 
     >div {
         display: flex;
@@ -26,9 +20,11 @@
 
 .row {
     position: relative;
+    z-index: 2;
 }
 
 .organisation {
+    height: 48px;
     flex-shrink: 0;
     padding: 4px 20px 4px 4px;
     display: flex;
@@ -66,17 +62,39 @@
     display: grid;
     place-items: center;
     z-index: 2;
+    pointer-events: none;
 
-    // &:before {
-    //     z-index: -10;
-    //     position: absolute;
-    //     display: block;
-    //     content: '';
-    //     width: 89px;
-    //     height: 48px;
-    //     // background: linear-gradient(270deg, #FFFFFF 51.69%, rgba(255, 255, 255, 0) 96.63%);
-    //     background: rebeccapurple;
-    // }
+    &.show {
+        pointer-events: all;
+    }
+}
+
+.btn,
+.gradientLeft,
+.gradientRight {
+    opacity: 0;
+    transition: opactity .2s;
+
+    &.show {
+        opacity: 1;
+    }
+}
+
+.gradientLeft,
+.gradientRight {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 89px;
+    height: 48px;
+    background: linear-gradient(270deg, #FFFFFF 51.69%, rgba(255, 255, 255, 0) 96.63%);
+    pointer-events: none;
+}
+
+.gradientRight,
+.rightBtn {
+    right: 0;
 }
 
 .leftBtn {
@@ -87,6 +105,7 @@
     }
 }
 
-.rightBtn {
-    right: 0;
+.gradientLeft {
+    left: 0;
+    transform: rotate(180deg);
 }

@@ -1,7 +1,7 @@
 import NumberedTitle from "components/NumberedTitle";
 import styles from "./SelectCharity.module.scss";
 import cn from "classnames";
-import RecentlySupported from "components/RecentlySupported";
+import RecentlySupportedSlider from "components/RecentlySupportedSlider";
 import { recentlySupportedOrganisations } from "data/charityOrganisations";
 import CharitySelector from "components/CharitySelector";
 import SelectedOrganisationInfo from "components/SelectedOrganisationInfo";
@@ -32,7 +32,7 @@ const SelectCharity = () => {
             ) : (
                 <>
                     <CharitySelector />
-                    <RecentlySupported
+                    <RecentlySupportedSlider
                         organisationList={recentlySupportedOrganisations}
                     />
                 </>

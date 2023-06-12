@@ -1,15 +1,20 @@
 import Arrow from "assets/icons/Arrow";
-import styles from "./RecentlySupported.module.scss";
+import styles from "./RecentlySupportedSlider.module.scss";
 import cn from "classnames";
 import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import { useOrganisationContext } from "context";
 
-const RecentlySupported = ({ organisationList }) => {
+const RecentlySupportedSlider = ({ organisationList }) => {
     const { setSelectedOrganisation } = useOrganisationContext();
-    // const [isEnd, setIsEnd] = useState(false);
-    // const [isBeginning, setIsBeginning] = useState(true);
+    const [isEnd, setIsEnd] = useState(false);
+    const [isBeginning, setIsBeginning] = useState(false);
+
+    const sliderButtonDisplayToggle = (swiper) => {
+        swiper.isBeginning ? setIsBeginning(true) : setIsBeginning(false);
+        swiper.isEnd ? setIsEnd(true) : setIsEnd(false);
+    };
 
     return (
         <div className={styles.wrapper}>
@@ -25,7 +30,8 @@ const RecentlySupported = ({ organisationList }) => {
                         nextEl: ".next-btn",
                     }}
                     modules={[Navigation]}
-                    onSlideChange={(swiper) => console.log(swiper.realIndex)}
+                    onSlideChange={sliderButtonDisplayToggle}
+                    onInit={sliderButtonDisplayToggle}
                 >
                     {organisationList.map((organisation, index) => (
                         <SwiperSlide
@@ -46,18 +52,37 @@ const RecentlySupported = ({ organisationList }) => {
                     ))}
                 </Swiper>
                 <button
-                    className={cn("cta prev-btn", styles.btn, styles.leftBtn)}
+                    className={cn(
+                        "cta prev-btn",
+                        styles.btn,
+                        styles.leftBtn,
+                        !isBeginning && styles.show
+                    )}
                 >
                     <Arrow />
                 </button>
+                <div
+                    className={cn(
+                        styles.gradientLeft,
+                        !isBeginning && styles.show
+                    )}
+                ></div>
                 <button
-                    className={cn("cta next-btn", styles.btn, styles.rightBtn)}
+                    className={cn(
+                        "cta next-btn",
+                        styles.btn,
+                        styles.rightBtn,
+                        !isEnd && styles.show
+                    )}
                 >
                     <Arrow />
                 </button>
+                <div
+                    className={cn(styles.gradientRight, !isEnd && styles.show)}
+                ></div>
             </div>
         </div>
     );
 };
 
-export default RecentlySupported;
+export default RecentlySupportedSlider;
