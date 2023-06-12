@@ -1,18 +1,18 @@
 .wrapper {
     padding: 8px 56px;
-    // overflow: scroll;
-    // height: fit-content;
+    height: 100%;
+    overflow-y: scroll;
 
-    // &::-webkit-scrollbar {
-    //     display: none;
-    // }
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .container {
     margin: 32px 0 56px;
     display: flex;
     gap: 32px;
-    height: 500px;
+    height: 100%;
 }
 
 .leftSide,
@@ -23,9 +23,9 @@
 }
 
 .leftSide {
-    width: 67.6%;
+    width: calc(67.6% - 16px);
 }
 
 .rightSide {
-    width: 32.4%;
+    width: calc(32.4% - 16px);
 }
