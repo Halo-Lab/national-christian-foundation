@@ -1,7 +1,7 @@
 import { useOrganisationContext } from "context";
 import RoundButton from "components/common/RoundButton";
-import Grant from "assets/icons/Grant";
-import GrantFilled from "assets/icons/GrantFilled";
+import Grant from "assets/icons/pages-icons/Grant";
+import GrantFilled from "assets/icons/pages-icons/GrantFilled";
 
 const SelectCharityButton = ({ organisation }) => {
     const { setSelectedOrganisation } = useOrganisationContext();
