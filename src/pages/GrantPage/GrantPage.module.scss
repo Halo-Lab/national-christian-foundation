@@ -1,6 +1,6 @@
 .wrapper {
     padding: 8px 56px;
-    height: 100%;
+    height: calc(100vh - 104px);
     overflow-y: scroll;
 
     &::-webkit-scrollbar {
@@ -12,11 +12,12 @@
     margin: 32px 0 56px;
     display: flex;
     gap: 32px;
-    height: 100%;
+    // height: 100%;
 }
 
 .leftSide,
 .rightSide {
+    height: fit-content;
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -28,4 +29,10 @@
 
 .rightSide {
     width: calc(32.4% - 16px);
+}
+
+.buttons {
+    display: flex;
+    gap: 24px;
+    align-items: center;
 }
