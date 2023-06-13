@@ -3,6 +3,7 @@ import styles from "./Popup.module.scss";
 import cn from "classnames";
 import { useEffect } from "react";
 import { useOrganisationContext } from "context";
+import Circle from "assets/icons/Circle";
 
 const Popup = () => {
     const { isPopupActive, setIsPopupActive, lastFavoriteOrganisationName } =
@@ -29,6 +30,7 @@ const Popup = () => {
                 added to your favorites list!
             </p>
             <div className={cn("cta icon", styles.icon)} onClick={closePopup}>
+                <Circle className={styles.circle} />
                 <Close />
             </div>
         </div>

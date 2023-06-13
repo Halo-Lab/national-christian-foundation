@@ -27,7 +27,7 @@ const FavoriteCharitiesDropdown = ({ organisationsList }) => {
         };
     }, []);
 
-    const openDropdown = () => setIsActive(true);
+    const toggleDropdown = () => setIsActive(true);
 
     const sortOrganisationsByName = (e) => {
         e.stopPropagation();
@@ -51,7 +51,7 @@ const FavoriteCharitiesDropdown = ({ organisationsList }) => {
     return (
         <div
             className={cn("cta", styles.wrapper, isActive && styles.active)}
-            onClick={openDropdown}
+            onClick={toggleDropdown}
             ref={dropdownRef}
         >
             <p className={cn("text-m", styles.placeholder)}>

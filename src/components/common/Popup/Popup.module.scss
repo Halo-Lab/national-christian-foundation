@@ -1,12 +1,13 @@
 .wrapper {
-    background: #0BA1D8;
+    background: var(--blue-color);
     border-radius: 16px;
-    padding: 16px 16px 16px 20px;
+    padding: 16px 20px;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
     display: flex;
+    align-items: center;
     gap: 20px;
     transition: .3s ease-in;
     transition-property: bottom, opacity;
@@ -19,24 +20,51 @@
     &.show {
         opacity: 1;
         bottom: 24px;
+
+        .circle>circle {
+            animation: draw 3s linear;
+        }
     }
 
     >p {
         color: var(--white-color);
-        max-width: 325px;
     }
 }
 
 .icon {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 50%;
+    position: relative;
 
-    >svg {
+    >svg:last-of-type {
         width: 6px;
         height: 6px;
 
         >path {
             fill: var(--white-color);
         }
+    }
+}
+
+.circle {
+    position: absolute;
+
+    >circle {
+        stroke-dasharray: 57;
+        stroke-dashoffset: 57;
+        transform: rotate(90deg) scaleX(-1);
+        transform-origin: center;
+    }
+}
+
+@keyframes draw {
+    0% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 57;
+    }
+
+    100% {
+        stroke-dashoffset: 57;
+        stroke-dasharray: 57;
     }
 }
