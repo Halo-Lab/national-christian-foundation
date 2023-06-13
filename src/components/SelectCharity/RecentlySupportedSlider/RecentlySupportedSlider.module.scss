@@ -20,7 +20,6 @@
 
 .row {
     position: relative;
-    z-index: 2;
 }
 
 .organisation {
@@ -61,7 +60,7 @@
     transform: translateY(-50%);
     display: grid;
     place-items: center;
-    z-index: 2;
+    z-index: 1;
     pointer-events: none;
 
     &.show {
@@ -82,7 +81,6 @@
 
 .gradientLeft,
 .gradientRight {
-    z-index: 1;
     position: absolute;
     top: 0;
     display: block;
