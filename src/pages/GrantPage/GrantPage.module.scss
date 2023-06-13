@@ -1,5 +1,5 @@
 .wrapper {
-    padding: 8px 56px;
+    padding: 8px 56px 0;
     height: calc(100vh - 104px);
     overflow-y: scroll;
 
@@ -9,7 +9,7 @@
 }
 
 .container {
-    margin: 32px 0 56px;
+    margin: 32px 0 24px;
     display: flex;
     gap: 32px;
 }
