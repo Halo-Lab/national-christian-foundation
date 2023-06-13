@@ -4,6 +4,7 @@ import cn from "classnames";
 import LikeButton from "components/common/LikeButton";
 import SelectCharityButton from "components/SelectCharity/SelectCharityButton";
 import CharityCategory from "components/SearchCharityModal/CharitiesSearchItem/CharityCategory";
+import { Link } from "react-router-dom";
 
 const CharitiesSearchItem = ({ organisation }) => {
     return (
@@ -12,20 +13,25 @@ const CharitiesSearchItem = ({ organisation }) => {
                 <div className={styles.logo}>
                     <img src={organisation.logo} alt={organisation.name} />
                 </div>
-                <div className={cn("cta", styles.info)}>
-                    <p className={cn("text-m", styles.name)}>
-                        {organisation.name}
-                    </p>
-                    <div className={styles.city}>
-                        <div className={styles.icon}>
-                            <MapPin />
-                        </div>
-                        <p className="text-m">
-                            {organisation.city + ", " + organisation.state}
+                <Link
+                    to={`/charity-profile/${organisation.id}`}
+                    state={{ ...organisation }}
+                >
+                    <div className={cn("cta", styles.info)}>
+                        <p className={cn("text-m", styles.name)}>
+                            {organisation.name}
                         </p>
+                        <div className={styles.city}>
+                            <div className={styles.icon}>
+                                <MapPin />
+                            </div>
+                            <p className="text-m">
+                                {organisation.city + ", " + organisation.state}
+                            </p>
+                        </div>
+                        <CharityCategory category={organisation.category} />
                     </div>
-                    <CharityCategory category={organisation.category} />
-                </div>
+                </Link>
             </div>
             <div className={styles.buttons}>
                 <SelectCharityButton organisation={organisation} />
