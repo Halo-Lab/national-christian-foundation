@@ -28,7 +28,7 @@ const Popup = () => {
                 </span>{" "}
                 added to your favorites list!
             </p>
-            <div className={cn("cta", styles.icon)} onClick={closePopup}>
+            <div className={cn("cta icon", styles.icon)} onClick={closePopup}>
                 <Close />
             </div>
         </div>

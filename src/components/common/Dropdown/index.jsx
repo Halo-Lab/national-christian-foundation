@@ -55,10 +55,10 @@ const Dropdown = ({
             >
                 {selected ? selected : placeholder}
             </p>
-            <div className={styles.icon}>
+            <div className={cn("icon", styles.icon)}>
                 <ChevronDown />
             </div>
-            <ul className={styles.dropdown}>
+            <ul className={cn("dropdown", styles.dropdown)}>
                 {optionsList.map((el, index) => (
                     <li
                         className={styles.dropdownItem}

@@ -38,3 +38,19 @@ body {
         border-color: var(--blue-color);
     }
 }
+
+.icon {
+    width: 20px;
+    height: 20px;
+    display: grid;
+    place-items: center;
+}
+
+.dropdown {
+    background: var(--white-color);
+    box-shadow: 0px 4px 14px rgba(5, 25, 44, 0.1);
+    border-radius: 16px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}

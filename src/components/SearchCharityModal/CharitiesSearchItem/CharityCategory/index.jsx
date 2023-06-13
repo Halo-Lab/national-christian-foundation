@@ -1,5 +1,5 @@
-import Smile from "assets/icons/categories/Smile";
 import styles from "./CharityCategory.module.scss";
+import Smile from "assets/icons/categories/Smile";
 import Giving from "assets/icons/categories/Giving";
 import Education from "assets/icons/categories/Education";
 import Spiritual from "assets/icons/categories/Spiritual";
@@ -30,7 +30,7 @@ const CharityCategory = ({ category }) => {
     }
     return (
         <div className={styles.wrapper}>
-            <div className={styles.icon}>{icon}</div>
+            <div className="icon">{icon}</div>
             <p className="text-m">{category}</p>
         </div>
     );

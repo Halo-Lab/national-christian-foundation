@@ -22,7 +22,7 @@ const SupportedCategoryInfo = ({ category, categoryIcon, description }) => {
             <div className={styles.tag}>
                 <p className="text-m">{category}</p>
                 <div
-                    className={cn("cta", styles.icon)}
+                    className={cn("cta icon", styles.icon)}
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
                 >
@@ -31,7 +31,7 @@ const SupportedCategoryInfo = ({ category, categoryIcon, description }) => {
                 {isTooltipActive && (
                     <div className={styles.tooltip}>
                         <div className={styles.tooltipTitle}>
-                            <div className={styles.categoryIcon}>
+                            <div className={cn("icon", styles.categoryIcon)}>
                                 {categoryIcon}
                             </div>
                             <p className="text-m bold">{category}</p>

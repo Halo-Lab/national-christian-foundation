@@ -11,7 +11,7 @@ const SettingsItem = ({ title, icon, aditional = false }) => {
                 aditional && styles.aditional
             )}
         >
-            <span className={styles.icon}>{icon}</span>
+            <span className="icon">{icon}</span>
             <p className="text-m">{title}</p>
             {title.toLowerCase() === "dark mode" && (
                 <div className={styles.themeToggle}>

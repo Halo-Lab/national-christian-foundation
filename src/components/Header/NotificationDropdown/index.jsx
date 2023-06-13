@@ -7,7 +7,13 @@ const NotificationDropdown = ({ isDropdownActive, setIsDropdownActive }) => {
     const closeDropdown = () => setIsDropdownActive(false);
 
     return (
-        <div className={cn(styles.wrapper, isDropdownActive && styles.active)}>
+        <div
+            className={cn(
+                "dropdown",
+                styles.wrapper,
+                isDropdownActive && styles.active
+            )}
+        >
             <div className={styles.title}>
                 <p className="text-m bold">Notifications</p>
                 <div

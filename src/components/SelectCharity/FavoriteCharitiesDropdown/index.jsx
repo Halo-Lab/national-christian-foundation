@@ -58,7 +58,7 @@ const FavoriteCharitiesDropdown = ({ organisationsList }) => {
                 My favorite charities
             </p>
             <ChevronDown />
-            <div className={styles.dropdown}>
+            <div className={cn("dropdown", styles.dropdown)}>
                 <div className={styles.btnWrapper}>
                     <button
                         className={cn("cta", styles.sortBtn)}

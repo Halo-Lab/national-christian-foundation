@@ -35,7 +35,7 @@ const ProfileInfo = () => {
         <div className={styles.wrapper}>
             <div className={cn("cta", styles.balance)}>
                 <p className="text-m">The sample family fund</p>
-                <div className={styles.chevron}>
+                <div className={cn("icon", styles.chevron)}>
                     <ChevronDown />
                 </div>
             </div>

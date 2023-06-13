@@ -7,7 +7,9 @@ const PageTag = ({ pageName, icon, activeIcon, isActive, setActivePage }) => {
             className={cn("cta", styles.wrapper, isActive ? styles.active : "")}
             onClick={() => setActivePage(pageName)}
         >
-            <div className={styles.icon}>{isActive ? activeIcon : icon}</div>
+            <div className={cn("icon", styles.icon)}>
+                {isActive ? activeIcon : icon}
+            </div>
             <p className={cn("text-m", isActive && "bold", styles.text)}>
                 {pageName}
             </p>
