@@ -33,7 +33,7 @@ const ProfileInfo = () => {
 
     return (
         <div className={styles.wrapper}>
-            <div className={cn("cta", styles.balance)}>
+            <div className={cn("cta", styles.fund)}>
                 <p className="text-m">The sample family fund</p>
                 <div className={cn("icon", styles.chevron)}>
                     <ChevronDown />
