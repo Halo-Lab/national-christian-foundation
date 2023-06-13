@@ -15,4 +15,4 @@ EXPOSE ${SERVER_PORT}
 # собираем приложение:
 RUN npm run build
 # стартуем:
-CMD npm start
+CMD serve -s build
