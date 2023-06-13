@@ -24,12 +24,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    &:hover {
-        .name {
-            text-decoration: underline;
-        }
-    }
 }
 
 .name {
@@ -37,4 +31,8 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
