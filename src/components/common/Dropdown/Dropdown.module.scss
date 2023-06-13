@@ -4,6 +4,7 @@
     border-radius: 16px;
     display: flex;
     justify-content: space-between;
+    gap: 5px;
     align-items: center;
     padding: 14px 20px;
     width: 100%;
@@ -15,6 +16,11 @@
 
         &.selected {
             color: var(--dark-color);
+            //temporary solution before design for this dropdown ready
+            max-width: 120px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
 
