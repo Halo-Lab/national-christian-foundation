@@ -1,0 +1,16 @@
+.wrapper {
+    width: 16px;
+    height: 16px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #D8DDE0;
+    border-radius: 4px;
+    background-color: var(--white-color);
+    transition: .15s ease-in;
+    transition-property: background-color, border-color;
+
+    &.checked {
+        border-color: var(--dark-color);
+        background-color: var(--dark-color);
+    }
+}
