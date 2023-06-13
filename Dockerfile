@@ -1,17 +1,18 @@
-# build environment
-FROM node:18 as builder
-RUN mkdir /usr/src/app
+# базовый образ:
+FROM node:16-alpine
+# создаём каталог приложения внутри контейнера:
+RUN mkdir -p /usr/src/app
+# переходим в каталог приложения:
 WORKDIR /usr/src/app
-ENV PATH /usr/src/app/node_modules/.bin:$PATH
-COPY . /usr/src/app
-RUN npm install
+# копируем package.json и package-lock.json в контейнер:
+COPY ./package*.json /usr/src/app/
+# устанавливаем npm-зависимости:
+RUN npm install && npm cache clean --force
+# копируем код приложения в контейнер:
+COPY ./ /usr/src/app
+# «выставляем наружу» порт веб-сервера
+EXPOSE ${SERVER_PORT}
+# собираем приложение:
 RUN npm run build
-
-# production environment
-FROM nginx:1.23.3-alpine
-RUN rm -rf /etc/nginx/conf.d
-RUN mkdir -p /etc/nginx/conf.d
-COPY ./default.conf /etc/nginx/conf.d/
-COPY --from=builder /usr/src/app/dist /usr/share/nginx/html
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+# стартуем:
+CMD npm start
