@@ -21,7 +21,6 @@ function App() {
             <main>
                 <Header />
                 <RouterProvider router={router} />
-                {/* <GrantPage /> */}
             </main>
             <Popup />
             <HelpButton />

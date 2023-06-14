@@ -1,13 +1,15 @@
 import { useLocation } from "react-router-dom";
 import styles from "./CharityProfile.module.scss";
+import CharityProfileInfo from "components/CharityProfileInfo";
 
 const CharityProfile = () => {
     const { state } = useLocation();
-    console.log(state);
     return (
         <div className={styles.wrapper}>
-            <h1>{state.name}</h1>
-            <img src={state.logo} alt="" />
+            <div className={styles.leftSide}>
+                <CharityProfileInfo organisation={state} />
+            </div>
+            <div className={styles.rightSide}></div>
         </div>
     );
 };

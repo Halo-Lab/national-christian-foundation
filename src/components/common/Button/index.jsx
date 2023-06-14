@@ -14,7 +14,9 @@ const Button = ({ type, text, size = "large", icon, disabled, onClick }) => {
             )}
             onClick={onClick}
         >
-            {icon && <div className={styles.iconWrapper}>{icon}</div>}
+            {icon && (
+                <div className={cn("icon", styles.iconWrapper)}>{icon}</div>
+            )}
             {size === "large" ? (
                 <p className={cn(styles.text, "text-m bold")}>{text}</p>
             ) : (

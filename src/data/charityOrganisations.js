@@ -166,23 +166,27 @@ export const suggestedCharitiesOrganisations = [
         logo: secondCvccLogo,
         city: "Grand Rapids, MI",
         address: "14601 Peyton Dr Chino Hills, CA 91709",
+        id: 8,
     },
     {
         name: "Grace ministries International",
         logo: graceLogo,
         city: "Grand Rapids, MI",
         address: "14601 Peyton Dr Chino Hills, CA 91709",
+        id: 9,
     },
     {
         name: "ACE mentor program of Greater Nashville, Inc.",
         logo: aceLogo,
         city: "Grand Rapids, MI",
         address: "14601 Peyton Dr Chino Hills, CA 91709",
+        id: 10,
     },
     {
         name: "The potter's house",
         logo: pottersHouseLogo,
         city: "Grand Rapids, MI",
         address: "14601 Peyton Dr Chino Hills, CA 91709",
+        id: 11,
     },
 ];

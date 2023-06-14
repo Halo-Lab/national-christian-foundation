@@ -108,3 +108,7 @@
     white-space: nowrap;
     transition: color .2s ease-in;
 }
+
+.iconWrapper>svg>path {
+    fill-opacity: 1;
+}

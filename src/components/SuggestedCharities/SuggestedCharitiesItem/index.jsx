@@ -1,6 +1,7 @@
 import styles from "./SuggestedCharitiesItem.module.scss";
 import cn from "classnames";
 import SelectCharityButton from "components/SelectCharity/SelectCharityButton";
+import { Link } from "react-router-dom";
 
 const SuggestedCharitiesItem = ({ organisation }) => {
     return (
@@ -12,14 +13,19 @@ const SuggestedCharitiesItem = ({ organisation }) => {
                 />
             </div>
             <div className={styles.content}>
-                <div className={styles.text}>
-                    <p className={cn("text-m bold", styles.name)}>
-                        {organisation.name}
-                    </p>
-                    <p className={cn("text-m", styles.city)}>
-                        {organisation.city}
-                    </p>
-                </div>
+                <Link
+                    to={`/charity-profile/${organisation.id}`}
+                    state={{ ...organisation }}
+                >
+                    <div className={styles.text}>
+                        <p className={cn("text-m bold", styles.name)}>
+                            {organisation.name}
+                        </p>
+                        <p className={cn("text-m", styles.city)}>
+                            {organisation.city}
+                        </p>
+                    </div>
+                </Link>
                 <SelectCharityButton organisation={organisation} />
             </div>
         </div>
