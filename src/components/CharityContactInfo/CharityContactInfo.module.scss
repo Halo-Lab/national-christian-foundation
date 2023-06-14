@@ -1,0 +1,23 @@
+.wrapper {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contactsItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.social {
+    display: flex;
+    gap: 16px;
+}
