@@ -6,6 +6,7 @@ import Phone from "assets/icons/Phone";
 import Website from "assets/icons/Website";
 
 const CharityContactInfo = ({ contacts }) => {
+    console.log(contacts.location);
     return (
         <div className={cn("grant-bg", styles.wrapper)}>
             <h4 className="title-h4">Contact information</h4>
@@ -14,16 +15,15 @@ const CharityContactInfo = ({ contacts }) => {
                     <div className="icon">
                         <MapPin />
                     </div>
-                    <p className="text-m">
-                        Chino valley community church 14601 Peyton Dr
-                        Chinohills, CA 91709
-                    </p>
+                    <p className="text-m">{contacts.location}</p>
                 </li>
                 <li className={styles.contactsItem}>
                     <div className="icon">
                         <Phone />
                     </div>
-                    <p className="text-m">909-606-4848</p>
+                    <a className="text-m" href={`tel:${contacts.phone}`}>
+                        {contacts.phone}
+                    </a>
                 </li>
                 <li className={styles.contactsItem}>
                     <div className="icon">
@@ -31,22 +31,29 @@ const CharityContactInfo = ({ contacts }) => {
                     </div>
                     <a
                         className="text-m"
-                        href="https://www.cvcchurch.org/"
+                        href={`https://www.${contacts.website}`}
                         target="_blank"
+                        rel="noreferrer"
                     >
-                        cvcchurch.org
+                        {contacts.website}
                     </a>
                 </li>
             </ul>
             <ul className={styles.social}>
-                <SocialNetworkLink type="twitter" href="https://twitter.com/" />
+                <SocialNetworkLink
+                    type="twitter"
+                    href={
+                        contacts.socialNetworks.twitter ||
+                        "https://twitter.com/"
+                    }
+                />
                 <SocialNetworkLink
                     type="facebook"
-                    href="https://www.facebook.com/"
+                    href={contacts.socialNetworks.facebook}
                 />
                 <SocialNetworkLink
                     type="instagram"
-                    href="https://www.instagram.com/"
+                    href={contacts.socialNetworks.instagram}
                 />
             </ul>
         </div>

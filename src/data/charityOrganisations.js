@@ -59,6 +59,17 @@ export const organisationSearchList = [
         state: "MI",
         id: 1,
         category: "Children's and youth ministry",
+        contacts: {
+            location:
+                "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
+            phone: "909-606-4848",
+            website: "cvcchurch.org",
+            socialNetworks: {
+                instagram:
+                    "https://www.instagram.com/chinovalleycommunitychurch/",
+                facebook: "https://www.facebook.com/cvcchurch.org",
+            },
+        },
     },
     {
         name: "Jarrett's joy cart",
@@ -68,6 +79,17 @@ export const organisationSearchList = [
         state: "KY",
         id: 2,
         category: "Giving and generosity",
+        contacts: {
+            location:
+                "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
+            phone: "909-606-4848",
+            website: "cvcchurch.org",
+            socialNetworks: {
+                instagram:
+                    "https://www.instagram.com/chinovalleycommunitychurch/",
+                facebook: "https://www.facebook.com/cvcchurch.org",
+            },
+        },
     },
     {
         name: "The potter's house",
@@ -77,6 +99,17 @@ export const organisationSearchList = [
         state: "MI",
         id: 3,
         category: "Education",
+        contacts: {
+            location:
+                "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
+            phone: "909-606-4848",
+            website: "cvcchurch.org",
+            socialNetworks: {
+                instagram:
+                    "https://www.instagram.com/chinovalleycommunitychurch/",
+                facebook: "https://www.facebook.com/cvcchurch.org",
+            },
+        },
     },
     {
         name: "Grace ministries international",
@@ -86,6 +119,17 @@ export const organisationSearchList = [
         state: "MI",
         id: 4,
         category: "Spiritual development",
+        contacts: {
+            location:
+                "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
+            phone: "909-606-4848",
+            website: "cvcchurch.org",
+            socialNetworks: {
+                instagram:
+                    "https://www.instagram.com/chinovalleycommunitychurch/",
+                facebook: "https://www.facebook.com/cvcchurch.org",
+            },
+        },
     },
     {
         name: "Serge (World Harvest Mission)",
@@ -95,6 +139,17 @@ export const organisationSearchList = [
         state: "DC",
         id: 5,
         category: "Evangelism and missions",
+        contacts: {
+            location:
+                "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
+            phone: "909-606-4848",
+            website: "cvcchurch.org",
+            socialNetworks: {
+                instagram:
+                    "https://www.instagram.com/chinovalleycommunitychurch/",
+                facebook: "https://www.facebook.com/cvcchurch.org",
+            },
+        },
     },
 
     {
@@ -105,6 +160,17 @@ export const organisationSearchList = [
         state: "MI",
         id: 6,
         category: "Children's and youth ministry",
+        contacts: {
+            location:
+                "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
+            phone: "909-606-4848",
+            website: "cvcchurch.org",
+            socialNetworks: {
+                instagram:
+                    "https://www.instagram.com/chinovalleycommunitychurch/",
+                facebook: "https://www.facebook.com/cvcchurch.org",
+            },
+        },
     },
     {
         name: "The potter's house",
@@ -114,6 +180,17 @@ export const organisationSearchList = [
         state: "MI",
         id: 7,
         category: "Education",
+        contacts: {
+            location:
+                "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
+            phone: "909-606-4848",
+            website: "cvcchurch.org",
+            socialNetworks: {
+                instagram:
+                    "https://www.instagram.com/chinovalleycommunitychurch/",
+                facebook: "https://www.facebook.com/cvcchurch.org",
+            },
+        },
     },
 ];
 
@@ -164,29 +241,77 @@ export const suggestedCharitiesOrganisations = [
     {
         name: "Chino valley community church",
         logo: secondCvccLogo,
-        city: "Grand Rapids, MI",
+        city: "Grand Rapids",
+        state: "MI",
         address: "14601 Peyton Dr Chino Hills, CA 91709",
         id: 8,
+        contacts: {
+            location:
+                "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
+            phone: "909-606-4848",
+            website: "cvcchurch.org",
+            socialNetworks: {
+                instagram:
+                    "https://www.instagram.com/chinovalleycommunitychurch/",
+                facebook: "https://www.facebook.com/cvcchurch.org",
+            },
+        },
     },
     {
         name: "Grace ministries International",
         logo: graceLogo,
-        city: "Grand Rapids, MI",
+        city: "Grand Rapids",
+        state: "MI",
         address: "14601 Peyton Dr Chino Hills, CA 91709",
         id: 9,
+        contacts: {
+            location:
+                "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
+            phone: "909-606-4848",
+            website: "cvcchurch.org",
+            socialNetworks: {
+                instagram:
+                    "https://www.instagram.com/chinovalleycommunitychurch/",
+                facebook: "https://www.facebook.com/cvcchurch.org",
+            },
+        },
     },
     {
         name: "ACE mentor program of Greater Nashville, Inc.",
         logo: aceLogo,
-        city: "Grand Rapids, MI",
+        city: "Grand Rapids",
+        state: "MI",
         address: "14601 Peyton Dr Chino Hills, CA 91709",
         id: 10,
+        contacts: {
+            location:
+                "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
+            phone: "909-606-4848",
+            website: "cvcchurch.org",
+            socialNetworks: {
+                instagram:
+                    "https://www.instagram.com/chinovalleycommunitychurch/",
+                facebook: "https://www.facebook.com/cvcchurch.org",
+            },
+        },
     },
     {
         name: "The potter's house",
         logo: pottersHouseLogo,
-        city: "Grand Rapids, MI",
+        city: "Grand Rapids",
+        state: "MI",
         address: "14601 Peyton Dr Chino Hills, CA 91709",
         id: 11,
+        contacts: {
+            location:
+                "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
+            phone: "909-606-4848",
+            website: "cvcchurch.org",
+            socialNetworks: {
+                instagram:
+                    "https://www.instagram.com/chinovalleycommunitychurch/",
+                facebook: "https://www.facebook.com/cvcchurch.org",
+            },
+        },
     },
 ];
