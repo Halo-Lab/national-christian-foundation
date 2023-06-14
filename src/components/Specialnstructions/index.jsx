@@ -1,7 +1,7 @@
 import NumberedTitle from "components/common/NumberedTitle";
 import styles from "./Specialnstructions.module.scss";
 import cn from "classnames";
-import LabeledCheckbox from "components/common/LabeledCheckbox";
+import Checkbox from "components/common/Checkbox";
 
 const Specialnstructions = () => {
     return (
@@ -10,8 +10,8 @@ const Specialnstructions = () => {
                 number={3}
                 title="Provide special instructions (optional)"
             />
-            <LabeledCheckbox label="Give special instructions to the charity" />
-            <LabeledCheckbox label="Give special instructions to NCF" />
+            <Checkbox label="Give special instructions to the charity" />
+            <Checkbox label="Give special instructions to NCF" />
         </div>
     );
 };

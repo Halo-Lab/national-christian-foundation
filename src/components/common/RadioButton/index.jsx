@@ -1,19 +1,20 @@
-import { useState } from "react";
 import cn from "classnames";
 import styles from "./RadioButton.module.scss";
 
-const RadioButton = ({ label, initialState }) => {
-    const [isChecked, setIsChecked] = useState(initialState);
-
-    const toggleState = () => setIsChecked(!isChecked);
-
+const RadioButton = ({ handleChange, id, isSelected, label, value }) => {
     return (
-        <div className={cn("cta", styles.wrapper)} onClick={toggleState}>
-            <div className={cn(styles.button, isChecked && styles.checked)}>
-                <span className={styles.circle}></span>
-            </div>
-            <p className="text-m">{label}</p>
-        </div>
+        <label className={cn("cta", styles.label)} htmlFor={id}>
+            <input
+                value={value}
+                type="radio"
+                checked={isSelected}
+                onChange={handleChange}
+                className={styles.input}
+                id={id}
+                name={value}
+            />
+            {label && <p className="text-m">{label}</p>}
+        </label>
     );
 };
 

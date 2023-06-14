@@ -1,7 +1,7 @@
 import NumberedTitle from "components/common/NumberedTitle";
 import styles from "./GrantDetails.module.scss";
 import cn from "classnames";
-import LabeledCheckbox from "components/common/LabeledCheckbox";
+import Checkbox from "components/common/Checkbox";
 import CustomInput from "components/common/CustomInput";
 import { useState } from "react";
 import Cost from "assets/icons/Cost";
@@ -9,6 +9,9 @@ import RadioButton from "components/common/RadioButton";
 
 const GrantDetails = () => {
     const [amountValue, setAmountValue] = useState("");
+    const [grantFrequency, setGrantFrequency] = useState("single");
+    const [timing, setTiming] = useState("asap");
+
     const amountInputChange = (value) => setAmountValue(value);
 
     return (
@@ -27,23 +30,44 @@ const GrantDetails = () => {
             <div className={styles.frequency}>
                 <h6 className="text-m bold">Grant frequency</h6>
                 <div className={styles.row}>
-                    <RadioButton label="Single grant" initialState={true} />
-                    <RadioButton label="Recurring grant" />
+                    <RadioButton
+                        id={1}
+                        label="Single grant"
+                        value={"single"}
+                        isSelected={grantFrequency === "single"}
+                        handleChange={() => setGrantFrequency("single")}
+                    />
+                    <RadioButton
+                        id={2}
+                        label="Recurring grant"
+                        value={"recurring"}
+                        isSelected={grantFrequency === "recurring"}
+                        handleChange={() => setGrantFrequency("recurring")}
+                    />
                 </div>
             </div>
             <div className={styles.timing}>
                 <h6 className="text-m bold">Timing</h6>
                 <div className={styles.row}>
                     <RadioButton
+                        id={3}
                         label="As soon as possible"
-                        initialState={true}
+                        value={"asap"}
+                        isSelected={timing === "asap"}
+                        handleChange={() => setTiming("asap")}
                     />
-                    <RadioButton label="On a specific future date" />
+                    <RadioButton
+                        id={4}
+                        label="On a specific future date"
+                        value={"specificDate"}
+                        isSelected={timing === "specificDate"}
+                        handleChange={() => setTiming("specificDate")}
+                    />
                 </div>
             </div>
             <div className={styles.privacy}>
                 <h6 className="text-m bold">Privacy</h6>
-                <LabeledCheckbox label="Make this grant anonymous?" />
+                <Checkbox label="Make this grant anonymous?" />
             </div>
         </div>
     );
