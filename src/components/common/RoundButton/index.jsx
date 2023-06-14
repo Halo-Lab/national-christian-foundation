@@ -2,7 +2,7 @@ import styles from "./RoundButton.module.scss";
 import cn from "classnames";
 
 const RoundButton = ({
-    size = "large",
+    size = "small",
     icon,
     filledIcon,
     disabled,
@@ -23,9 +23,11 @@ const RoundButton = ({
             onClick={onClick}
         >
             {type.toLowerCase() !== "like" && (
-                <div className={styles.filledIcon}>{filledIcon}</div>
+                <div className={cn("icon", styles.filledIcon)}>
+                    {filledIcon}
+                </div>
             )}
-            <div className={styles.icon}> {icon}</div>
+            <div className={cn("icon", styles.icon)}> {icon}</div>
         </button>
     );
 };

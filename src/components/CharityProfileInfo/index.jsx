@@ -55,7 +55,7 @@ const CharityProfileInfo = ({ organisation }) => {
                         type="primary"
                         onClick={selectOrganisation}
                     />
-                    <LikeButton organisation={organisation} />
+                    <LikeButton organisation={organisation} size="large" />
                 </div>
             </div>
             <ul className={styles.statistics}>

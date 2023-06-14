@@ -3,7 +3,7 @@ import Heart from "assets/icons/Heart";
 import { useOrganisationContext } from "context";
 import styles from "./LikeButton.module.scss";
 
-const LikeButton = ({ organisation }) => {
+const LikeButton = ({ organisation, size = "small" }) => {
     const {
         favoritesList,
         setFavoritesList,
@@ -34,7 +34,7 @@ const LikeButton = ({ organisation }) => {
 
     return (
         <RoundButton
-            size="small"
+            size={size}
             icon={<Heart />}
             type="like"
             className={checkIsLiked(organisation) && styles.filled}
