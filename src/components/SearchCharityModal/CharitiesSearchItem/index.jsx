@@ -3,7 +3,7 @@ import styles from "./CharitiesSearchItem.module.scss";
 import cn from "classnames";
 import LikeButton from "components/common/LikeButton";
 import SelectCharityButton from "components/SelectCharity/SelectCharityButton";
-import CharityCategory from "components/SearchCharityModal/CharitiesSearchItem/CharityCategory";
+import CharityCause from "components/common/CharityCause";
 import { Link } from "react-router-dom";
 
 const CharitiesSearchItem = ({ organisation }) => {
@@ -29,7 +29,10 @@ const CharitiesSearchItem = ({ organisation }) => {
                                 {organisation.city + ", " + organisation.state}
                             </p>
                         </div>
-                        <CharityCategory category={organisation.category} />
+                        <CharityCause
+                            cause={organisation.cause}
+                            textColor="grey"
+                        />
                     </div>
                 </Link>
             </div>

@@ -6,7 +6,6 @@ import Phone from "assets/icons/Phone";
 import Website from "assets/icons/Website";
 
 const CharityContactInfo = ({ contacts }) => {
-    console.log(contacts.location);
     return (
         <div className={cn("grant-bg", styles.wrapper)}>
             <h4 className="title-h4">Contact information</h4>

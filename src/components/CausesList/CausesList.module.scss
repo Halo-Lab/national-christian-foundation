@@ -1,0 +1,16 @@
+.wrapper {
+    padding: 32px;
+}
+
+.primary {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #D8DDE0;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+}

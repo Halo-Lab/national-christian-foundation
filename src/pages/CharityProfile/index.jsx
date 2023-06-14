@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import styles from "./CharityProfile.module.scss";
 import CharityProfileInfo from "components/CharityProfileInfo";
 import CharityContactInfo from "components/CharityContactInfo";
+import CausesList from "components/CausesList";
 
 const CharityProfile = () => {
     const { state } = useLocation();
@@ -13,6 +14,10 @@ const CharityProfile = () => {
             </div>
             <div className={styles.rightSide}>
                 <CharityContactInfo contacts={state.contacts} />
+                <CausesList
+                    primaryCause={state.cause}
+                    secondaryCauses={state.causesList}
+                />
             </div>
         </div>
     );
