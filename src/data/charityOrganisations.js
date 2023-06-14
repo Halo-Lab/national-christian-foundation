@@ -58,7 +58,7 @@ export const organisationSearchList = [
         city: "Grand Rapids",
         state: "MI",
         id: 1,
-        category: "Children's and youth ministry",
+        cause: "Children's and youth ministry",
         contacts: {
             location:
                 "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
@@ -78,7 +78,7 @@ export const organisationSearchList = [
         city: "Lexington",
         state: "KY",
         id: 2,
-        category: "Giving and generosity",
+        cause: "Giving and generosity",
         contacts: {
             location:
                 "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
@@ -98,7 +98,7 @@ export const organisationSearchList = [
         city: "Grand Rapids",
         state: "MI",
         id: 3,
-        category: "Education",
+        cause: "Education",
         contacts: {
             location:
                 "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
@@ -118,7 +118,7 @@ export const organisationSearchList = [
         city: "Grand Rapids",
         state: "MI",
         id: 4,
-        category: "Spiritual development",
+        cause: "Spiritual development",
         contacts: {
             location:
                 "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
@@ -138,7 +138,7 @@ export const organisationSearchList = [
         city: "Washington",
         state: "DC",
         id: 5,
-        category: "Evangelism and missions",
+        cause: "Evangelism and missions",
         contacts: {
             location:
                 "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
@@ -159,7 +159,7 @@ export const organisationSearchList = [
         city: "Grand Rapids",
         state: "MI",
         id: 6,
-        category: "Children's and youth ministry",
+        cause: "Children's and youth ministry",
         contacts: {
             location:
                 "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
@@ -179,7 +179,7 @@ export const organisationSearchList = [
         city: "Grand Rapids",
         state: "MI",
         id: 7,
-        category: "Education",
+        cause: "Education",
         contacts: {
             location:
                 "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
@@ -245,6 +245,7 @@ export const suggestedCharitiesOrganisations = [
         state: "MI",
         address: "14601 Peyton Dr Chino Hills, CA 91709",
         id: 8,
+        cause: "Children's and youth ministry",
         contacts: {
             location:
                 "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
@@ -264,6 +265,7 @@ export const suggestedCharitiesOrganisations = [
         state: "MI",
         address: "14601 Peyton Dr Chino Hills, CA 91709",
         id: 9,
+        cause: "Education",
         contacts: {
             location:
                 "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
@@ -283,6 +285,7 @@ export const suggestedCharitiesOrganisations = [
         state: "MI",
         address: "14601 Peyton Dr Chino Hills, CA 91709",
         id: 10,
+        cause: "Evangelism and missions",
         contacts: {
             location:
                 "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
@@ -302,6 +305,7 @@ export const suggestedCharitiesOrganisations = [
         state: "MI",
         address: "14601 Peyton Dr Chino Hills, CA 91709",
         id: 11,
+        cause: "Education",
         contacts: {
             location:
                 "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",

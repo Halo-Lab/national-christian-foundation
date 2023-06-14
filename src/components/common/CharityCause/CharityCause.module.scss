@@ -2,9 +2,8 @@
     display: flex;
     align-items: center;
     gap: 8px;
-
-    >p {
-        color: var(--text-grey-color);
-    }
 }
 
+.cause.grey {
+    color: var(--text-grey-color);
+}
