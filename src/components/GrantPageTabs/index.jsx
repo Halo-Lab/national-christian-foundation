@@ -23,7 +23,7 @@ const GrantPageTabs = () => {
                     key={index}
                     onClick={() => setActiveTab(el.name)}
                 >
-                    <p className="title-h4 ">{el.title}</p>
+                    <h4 className="title-h4 grey">{el.title}</h4>
                 </li>
             ))}
         </ul>

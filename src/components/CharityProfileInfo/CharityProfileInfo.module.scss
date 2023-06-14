@@ -21,12 +21,12 @@
     display: flex;
     align-items: center;
     gap: 24px;
-    // justify-content: space-between;
 }
 
 .text {
     display: flex;
     flex-direction: column;
+    gap: 8px;
     max-width: 284px;
 }
 
@@ -34,10 +34,6 @@
     display: flex;
     align-items: center;
     gap: 8px;
-
-    >p {
-        color: var(--text-grey-color);
-    }
 
     svg>path {
         stroke: var(--category-icon-color);

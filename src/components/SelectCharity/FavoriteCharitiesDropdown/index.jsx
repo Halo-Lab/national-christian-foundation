@@ -54,7 +54,7 @@ const FavoriteCharitiesDropdown = ({ organisationsList }) => {
             onClick={toggleDropdown}
             ref={dropdownRef}
         >
-            <p className={cn("text-m", styles.placeholder)}>
+            <p className={cn("text-m grey", styles.placeholder)}>
                 My favorite charities
             </p>
             <ChevronDown />
@@ -67,7 +67,7 @@ const FavoriteCharitiesDropdown = ({ organisationsList }) => {
                         <div className={styles.icon}>
                             <Transfer />
                         </div>
-                        <p className="text-s bold">
+                        <p className="text-s bold grey">
                             Sort by: Name {isSorted ? "Z-A" : "A-Z"}
                         </p>
                     </button>

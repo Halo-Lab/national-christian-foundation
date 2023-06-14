@@ -56,7 +56,7 @@ const CharitiesSearchList = ({ query, selectedOption }) => {
                         <div className={styles.icon}>
                             <Search />
                         </div>
-                        <p className="text-m">No results found...</p>
+                        <p className="text-m grey">No results found...</p>
                     </div>
                     <h4 className="title-h4">Recently supported</h4>
                     <ul className={styles.list}>

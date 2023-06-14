@@ -21,7 +21,7 @@ const SuggestedCharitiesItem = ({ organisation }) => {
                         <p className={cn("text-m bold", styles.name)}>
                             {organisation.name}
                         </p>
-                        <p className={cn("text-m", styles.city)}>
+                        <p className={cn("text-m grey", styles.city)}>
                             {`${organisation.city}, ${organisation.state}`}
                         </p>
                     </div>

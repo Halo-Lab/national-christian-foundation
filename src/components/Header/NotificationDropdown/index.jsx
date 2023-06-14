@@ -15,7 +15,7 @@ const NotificationDropdown = ({ isDropdownActive, setIsDropdownActive }) => {
             )}
         >
             <div className={styles.title}>
-                <p className="text-m bold">Notifications</p>
+                <p className="text-m bold grey">Notifications</p>
                 <div
                     className={cn("cta", styles.close)}
                     onClick={closeDropdown}

@@ -29,6 +29,10 @@
     line-height: 130%;
     letter-spacing: 0.01em;
     color: var(--text-color);
+
+    &.grey {
+        color: var(--text-grey-color);
+    }
 }
 
 .text-m {
@@ -38,6 +42,10 @@
     line-height: 150%;
     letter-spacing: 0.02em;
     color: var(--text-color);
+
+    &.grey {
+        color: var(--text-grey-color);
+    }
 }
 
 .text-s {
@@ -47,6 +55,10 @@
     line-height: 145%;
     letter-spacing: 0.01em;
     color: var(--text-color);
+
+    &.grey {
+        color: var(--text-grey-color);
+    }
 }
 
 .text-xs {
@@ -56,6 +68,10 @@
     line-height: 125%;
     letter-spacing: 0.02em;
     color: var(--text-color);
+
+    &.grey {
+        color: var(--text-grey-color);
+    }
 }
 
 .bold {

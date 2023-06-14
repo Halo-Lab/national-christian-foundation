@@ -35,15 +35,10 @@
     align-items: center;
 }
 
-.city,
-.category {
+.city {
     display: flex;
     gap: 8px;
     align-items: center;
-
-    >p {
-        color: var(--text-grey-color);
-    }
 }
 
 .buttons {

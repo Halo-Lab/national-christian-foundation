@@ -25,7 +25,7 @@ const CharitiesSearchItem = ({ organisation }) => {
                             <div className={styles.icon}>
                                 <MapPin />
                             </div>
-                            <p className="text-m">
+                            <p className="text-m grey">
                                 {organisation.city + ", " + organisation.state}
                             </p>
                         </div>

@@ -32,13 +32,7 @@ const CharityCause = ({ cause, textColor = "default" }) => {
     return (
         <div className={styles.wrapper}>
             <div className="icon">{icon}</div>
-            <p
-                className={cn(
-                    "text-m",
-                    styles.cause,
-                    textColor === "grey" && styles.grey
-                )}
-            >
+            <p className={cn("text-m", textColor === "grey" && "grey")}>
                 {cause}
             </p>
         </div>

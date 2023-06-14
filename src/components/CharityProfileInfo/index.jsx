@@ -45,7 +45,7 @@ const CharityProfileInfo = ({ organisation }) => {
                         <div className="icon">
                             <MapPin />
                         </div>
-                        <p className="text-m">{`${organisation.city}, ${organisation.state}`}</p>
+                        <p className="text-m grey">{`${organisation.city}, ${organisation.state}`}</p>
                     </div>
                 </div>
                 <div className={styles.buttons}>

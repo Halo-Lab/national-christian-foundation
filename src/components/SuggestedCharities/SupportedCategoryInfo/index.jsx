@@ -16,9 +16,7 @@ const SupportedCategoryInfo = ({ category, categoryIcon, description }) => {
 
     return (
         <div className={styles.wrapper}>
-            <h6 className={cn("text-m bold", styles.title)}>
-                Because you supported
-            </h6>
+            <h6 className={"text-m bold grey"}>Because you supported</h6>
             <div className={styles.tag}>
                 <p className="text-m">{category}</p>
                 <div

@@ -11,17 +11,13 @@
     position: relative;
     transition: border-color .2s ease-in;
 
-    >.label {
-        color: var(--text-grey-color);
-
-        &.selected {
-            color: var(--dark-color);
-            //temporary solution before design for this dropdown ready
-            max-width: 120px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+    >.label.selected {
+        color: var(--dark-color);
+        //temporary solution before design for this dropdown ready
+        max-width: 120px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     &:hover {

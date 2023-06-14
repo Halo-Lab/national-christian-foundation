@@ -48,7 +48,7 @@ const Dropdown = ({
         >
             <p
                 className={cn(
-                    "text-m",
+                    "text-m grey",
                     styles.label,
                     selected && styles.selected
                 )}
