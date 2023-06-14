@@ -15,14 +15,14 @@ import Legacy from "../../../assets/icons/pages-icons/Legacy";
 import LegacyFilled from "../../../assets/icons/pages-icons/LegacyFilled";
 
 const PagesList = () => {
-    const [activePage, setActivePage] = useState("grant");
+    const [activePage, setActivePage] = useState("sent");
 
     const pages = [
         { name: "home", icon: <Home />, activeIcon: <HomeFilled /> },
-        { name: "grant", icon: <Grant />, activeIcon: <GrantFilled /> },
-        { name: "give", icon: <Give />, activeIcon: <GiveFilled /> },
+        { name: "sent", icon: <Grant />, activeIcon: <GrantFilled /> },
+        { name: "add", icon: <Give />, activeIcon: <GiveFilled /> },
         {
-            name: "Favorites",
+            name: "favorites",
             icon: <Favorites />,
             activeIcon: <FavoritesFilled />,
         },

@@ -40,7 +40,7 @@
 .tooltip {
     width: 100%;
     max-width: 336px;
-    bottom: 44px;
+    top: calc(100% + 4px);
     left: 0;
     position: absolute;
     padding: 16px;

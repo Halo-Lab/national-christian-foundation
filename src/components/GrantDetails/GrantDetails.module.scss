@@ -1,0 +1,24 @@
+.wrapper {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.frequency,
+.timing,
+.privacy,
+.amount {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.amount {
+    max-width: 398px;
+}
+
+.row {
+    display: flex;
+    gap: 32px;
+}

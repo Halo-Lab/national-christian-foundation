@@ -1,0 +1,36 @@
+.label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.input {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #D8DDE0;
+    position: relative;
+    transition: border-color .15s ease-in;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: var(--dark-color);
+        opacity: 0;
+        transition: opacity .15s ease-in;
+    }
+
+    &:checked {
+        border-color: var(--dark-color);
+
+        &:before {
+            opacity: 1;
+        }
+    }
+}

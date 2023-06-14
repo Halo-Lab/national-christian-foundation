@@ -2,7 +2,13 @@ import React, { useEffect, useState } from "react";
 import cn from "classnames";
 import styles from "./CustomInput.module.scss";
 
-const CustomInput = ({ icon, placeholder, onInputChange, value }) => {
+const CustomInput = ({
+    type = "text",
+    icon,
+    placeholder,
+    onInputChange,
+    value,
+}) => {
     const [inputValue, setInputValue] = useState("");
 
     useEffect(() => setInputValue(value), [value]);
@@ -15,10 +21,10 @@ const CustomInput = ({ icon, placeholder, onInputChange, value }) => {
 
     return (
         <div className={cn("cta", styles.wrapper)}>
-            {icon && icon}
+            {icon && <div className="icon">{icon}</div>}
             <input
                 className={cn("text-m", styles.input)}
-                type="text"
+                type={type}
                 placeholder={placeholder}
                 value={inputValue}
                 onChange={handleInputChange}

@@ -15,6 +15,7 @@
     &.hide {
         opacity: 0;
         bottom: -24px;
+        pointer-events: none;
     }
 
     &.show {
