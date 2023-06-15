@@ -12,7 +12,9 @@ const RangeInput = ({ currentTime, onSeek, duration }) => {
             <div
                 className={cn("cta", styles.progress)}
                 style={{
-                    width: `${(currentTime / duration).toFixed(2) * 100}%`,
+                    width: `${
+                        ((currentTime / duration).toFixed(2) + 1) * 100
+                    }%`,
                 }}
             ></div>
             <input

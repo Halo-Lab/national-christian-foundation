@@ -6,6 +6,7 @@ import SuggestedCharities from "components/SuggestedCharities";
 import GrantDetails from "components/GrantDetails";
 import Specialnstructions from "components/Specialnstructions";
 import Button from "components/common/Button";
+import ButtonLink from "components/common/ButtonLink";
 
 const GrantPage = () => {
     return (
@@ -18,7 +19,7 @@ const GrantPage = () => {
                     <Specialnstructions />
                     <div className={styles.buttons}>
                         <Button text="Submit grant" type="primary" />
-                        <Button text="Clear all" type="ghost" />
+                        <ButtonLink text="Clear all" />
                     </div>
                 </div>
                 <div className={styles.rightSide}>
