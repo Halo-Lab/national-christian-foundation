@@ -4,8 +4,8 @@ import { organisationSearchList } from "data/charityOrganisations";
 import { removeDuplicates } from "helpers/removeDuplicates";
 
 const FilterRow = ({ selectedOption, setSelectedOption }) => {
-    const categoryList = removeDuplicates(
-        organisationSearchList.map((el) => el.category)
+    const causesList = removeDuplicates(
+        organisationSearchList.map((el) => el.cause)
     );
     const citiesList = removeDuplicates(
         organisationSearchList.map((el) => el.city)
@@ -32,7 +32,7 @@ const FilterRow = ({ selectedOption, setSelectedOption }) => {
                 />
                 <Dropdown
                     placeholder="Cause"
-                    optionsList={categoryList}
+                    optionsList={causesList}
                     selectedOption={selectedOption}
                     setSelectedOption={setSelectedOption}
                 />
