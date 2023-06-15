@@ -1,12 +1,14 @@
+import VideoPlayer from "components/VideoPlayer";
 import styles from "./AboutCharity.module.scss";
 import cn from "classnames";
+import videoSrc from "assets/videos/Casey-Crawford’s-story.mp4";
 
 const AboutCharity = () => {
     return (
         <div className={cn("grant-bg", styles.wrapper)}>
             <div className={styles.video}>
                 <h4 className="title-h4">Videos block</h4>
-                <p>video</p>
+                <VideoPlayer src={videoSrc} />
             </div>
             <div className={styles.about}>
                 <h4 className="title-h4">About us:</h4>
