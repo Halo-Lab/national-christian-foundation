@@ -6,7 +6,7 @@ const RangeInput = ({ currentTime, onSeek, duration }) => {
         const seekTime = parseFloat(e.target.value);
         onSeek(seekTime);
     };
-    
+
     return (
         <label className={styles.label} htmlFor="video-range">
             <div

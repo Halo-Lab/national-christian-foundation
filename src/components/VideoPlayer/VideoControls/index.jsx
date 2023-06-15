@@ -41,6 +41,7 @@ const VideoControls = ({
                     currentTime={currentTime}
                     onSeek={onSeek}
                 />
+                {console.log(duration)}
                 <p className="video-digits">{transformSecToMin(duration)}</p>
                 <div className={cn("cta", styles.controlIcon)}>
                     <Volume />

@@ -12,7 +12,7 @@ const CharityProfile = () => {
         <div className={styles.wrapper}>
             <div className={styles.leftSide}>
                 <CharityProfileInfo organisation={state} />
-                <AboutCharity />
+                <AboutCharity organisation={state} />
             </div>
             <div className={styles.rightSide}>
                 <CharityContactInfo contacts={state.contacts} />

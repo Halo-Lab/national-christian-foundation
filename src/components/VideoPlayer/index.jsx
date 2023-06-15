@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import styles from "./VideoPlayer.module.scss";
 import VideoControls from "./VideoControls";
 
-const VideoPlayer = ({ src }) => {
+const VideoPlayer = ({ src, poster }) => {
     const videoRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [isMouseOver, setIsMouseOver] = useState(false);
@@ -37,7 +37,7 @@ const VideoPlayer = ({ src }) => {
 
     const handleMouseEnter = () => setIsMouseOver(true);
     const handleMouseLeave = () => setIsMouseOver(false);
-    
+
     return (
         <div
             className={styles.wrapper}
@@ -48,10 +48,10 @@ const VideoPlayer = ({ src }) => {
                 className={styles.video}
                 ref={videoRef}
                 src={src}
-                muted
                 loop
                 onTimeUpdate={handleTimeUpdate}
                 controls={false}
+                poster={poster}
             />
             <VideoControls
                 isPlaying={isPlaying}
