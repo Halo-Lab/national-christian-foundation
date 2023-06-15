@@ -1,14 +1,12 @@
 import { useRef, useState } from "react";
 import styles from "./VideoPlayer.module.scss";
-import Pause from "assets/icons/Pause";
-import Play from "assets/icons/Play";
-import cn from "classnames";
-import { transformSecToMin } from "helpers/transformSecToMin";
+import VideoControls from "./VideoControls";
 
 const VideoPlayer = ({ src }) => {
     const videoRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [isMouseOver, setIsMouseOver] = useState(false);
+    const [currentTime, setCurrentTime] = useState(0);
 
     const togglePlay = () => {
         const video = videoRef.current;
@@ -17,19 +15,29 @@ const VideoPlayer = ({ src }) => {
         } else {
             video.pause();
         }
-        setIsPlaying(!video.paused);
+        setIsPlaying(!isPlaying);
     };
 
-    const handleSeek = (e) => {
+    const toggleFullScreen = () => {
         const video = videoRef.current;
-        const seekTime = (video.duration / 100) * e.target.value;
-        video.currentTime = seekTime;
+
+        if (video.requestFullscreen) video.requestFullscreen();
+        else if (video.mozRequestFullScreen) video.mozRequestFullScreen();
+        else if (video.webkitRequestFullscreen) video.webkitRequestFullscreen();
+        else if (video.msRequestFullscreen) video.msRequestFullscreen();
     };
+
+    const handleSeek = (seekTime) => {
+        videoRef.current.currentTime = seekTime;
+        setCurrentTime(seekTime);
+    };
+
+    const handleTimeUpdate = () =>
+        setCurrentTime(videoRef.current?.currentTime);
 
     const handleMouseEnter = () => setIsMouseOver(true);
-
     const handleMouseLeave = () => setIsMouseOver(false);
-
+    
     return (
         <div
             className={styles.wrapper}
@@ -42,37 +50,19 @@ const VideoPlayer = ({ src }) => {
                 src={src}
                 muted
                 loop
+                onTimeUpdate={handleTimeUpdate}
+                controls={false}
             />
-            <button
-                onClick={togglePlay}
-                className={cn(
-                    "cta",
-                    styles.playBtn,
-                    isMouseOver && styles.active
-                )}
-            >
-                <div className="icon">{isPlaying ? <Pause /> : <Play />}</div>
-            </button>
-            <div
-                className={cn(styles.controlsRow, isMouseOver && styles.active)}
-            >
-                {/* <div>{transformSecToMin(videoRef.current?.currentTime)}</div> */}
-                <div>
-                    <input
-                        type="range"
-                        min="0"
-                        max="100"
-                        step="0.1"
-                        onChange={handleSeek}
-                        value={
-                            (videoRef.current?.currentTime /
-                                videoRef.current?.duration) *
-                                100 || 0
-                        }
-                    />
-                </div>
-                {/* <div>{transformSecToMin(videoRef.current?.duration)}</div> */}
-            </div>
+            <VideoControls
+                isPlaying={isPlaying}
+                togglePlay={togglePlay}
+                isMouseOver={isMouseOver}
+                videoRef={videoRef}
+                currentTime={currentTime}
+                duration={videoRef.current?.duration}
+                toggleFullScreen={toggleFullScreen}
+                onSeek={handleSeek}
+            />
         </div>
     );
 };

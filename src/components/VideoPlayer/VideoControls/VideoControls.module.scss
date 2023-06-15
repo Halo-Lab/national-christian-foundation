@@ -1,0 +1,68 @@
+.playBtn {
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    background-color: var(--white-color);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity .2s ease-in;
+
+    &.active {
+        opacity: 1;
+    }
+}
+
+.controlsRow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: calc(100% - 24px);
+    padding: 8px 16px;
+    bottom: 12px;
+    left: 12px;
+    position: absolute;
+    height: 40px;
+    background: #707070;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: .2s ease-in;
+    transition-property: opacity, transform;
+
+    &.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.play {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: var(--white-color);
+    display: grid;
+    place-items: center;
+
+    >svg {
+        width: 6px;
+        height: 8px;
+
+        >path {
+            fill: #707070;
+        }
+    }
+}
+
+.controlIcon {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    display: grid;
+    place-items: center;
+}
