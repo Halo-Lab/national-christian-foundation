@@ -14,6 +14,16 @@ const CausesList = ({ primaryCause, secondaryCauses }) => {
                 </div>
                 <CharityCause cause={primaryCause} />
             </div>
+            {secondaryCauses && (
+                <div className={styles.secondary}>
+                    <h4 className="title-h4">Secondary causes</h4>
+                    <ul className={styles.list}>
+                        {secondaryCauses.map((cause, index) => (
+                            <CharityCause cause={cause} key={index} />
+                        ))}
+                    </ul>
+                </div>
+            )}
         </div>
     );
 };

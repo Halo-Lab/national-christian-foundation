@@ -2,15 +2,29 @@
     padding: 32px;
 }
 
-.primary {
+.primary,
+.secondary {
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding-bottom: 32px;
-    border-bottom: 1px solid #D8DDE0;
+}
+
+.primary {
+    margin-bottom: 32px;
+}
+
+.secondary {
+    padding-top: 32px;
+    border-top: 1px solid #D8DDE0;
 }
 
 .title {
     display: flex;
     justify-content: space-between;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }

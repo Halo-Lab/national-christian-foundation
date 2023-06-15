@@ -4,6 +4,8 @@ import Giving from "assets/icons/categories/Giving";
 import Education from "assets/icons/categories/Education";
 import Spiritual from "assets/icons/categories/Spiritual";
 import Evangelism from "assets/icons/categories/Evangelism";
+import Environment from "assets/icons/categories/Environment";
+import Humanitarian from "assets/icons/categories/Humanitarian";
 import cn from "classnames";
 
 const CharityCause = ({ cause, textColor = "default" }) => {
@@ -22,8 +24,14 @@ const CharityCause = ({ cause, textColor = "default" }) => {
         case "Spiritual development":
             icon = <Spiritual />;
             break;
-        case "Evangelism and missions":
+        case "Evangelism & missions":
             icon = <Evangelism />;
+            break;
+        case "Humanitarian aid & development":
+            icon = <Humanitarian />;
+            break;
+        case "Environment":
+            icon = <Environment />;
             break;
 
         default:

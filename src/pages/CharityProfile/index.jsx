@@ -16,7 +16,7 @@ const CharityProfile = () => {
                 <CharityContactInfo contacts={state.contacts} />
                 <CausesList
                     primaryCause={state.cause}
-                    secondaryCauses={state.causesList}
+                    secondaryCauses={state.secondaryCauses}
                 />
             </div>
         </div>

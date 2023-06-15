@@ -2,6 +2,12 @@
     padding: 0 56px;
     display: flex;
     gap: 32px;
+    height: calc(100vh - 104px);
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .leftSide,
@@ -10,6 +16,7 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
+    margin-bottom: 24px;
 }
 
 .leftSide {

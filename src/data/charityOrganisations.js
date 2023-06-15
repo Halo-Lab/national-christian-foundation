@@ -59,6 +59,11 @@ export const organisationSearchList = [
         state: "MI",
         id: 1,
         cause: "Children's and youth ministry",
+        secondaryCauses: [
+            "Humanitarian aid & development",
+            "Environment",
+            "Evangelism & missions",
+        ],
         contacts: {
             location:
                 "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
@@ -79,6 +84,11 @@ export const organisationSearchList = [
         state: "KY",
         id: 2,
         cause: "Giving and generosity",
+        secondaryCauses: [
+            "Humanitarian aid & development",
+            "Environment",
+            "Evangelism & missions",
+        ],
         contacts: {
             location:
                 "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
@@ -99,6 +109,11 @@ export const organisationSearchList = [
         state: "MI",
         id: 3,
         cause: "Education",
+        secondaryCauses: [
+            "Humanitarian aid & development",
+            "Environment",
+            "Evangelism & missions",
+        ],
         contacts: {
             location:
                 "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
@@ -119,6 +134,11 @@ export const organisationSearchList = [
         state: "MI",
         id: 4,
         cause: "Spiritual development",
+        secondaryCauses: [
+            "Humanitarian aid & development",
+            "Environment",
+            "Evangelism & missions",
+        ],
         contacts: {
             location:
                 "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
@@ -138,7 +158,12 @@ export const organisationSearchList = [
         city: "Washington",
         state: "DC",
         id: 5,
-        cause: "Evangelism and missions",
+        cause: "Evangelism & missions",
+        secondaryCauses: [
+            "Humanitarian aid & development",
+            "Environment",
+            "Evangelism & missions",
+        ],
         contacts: {
             location:
                 "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
@@ -160,6 +185,11 @@ export const organisationSearchList = [
         state: "MI",
         id: 6,
         cause: "Children's and youth ministry",
+        secondaryCauses: [
+            "Humanitarian aid & development",
+            "Environment",
+            "Evangelism & missions",
+        ],
         contacts: {
             location:
                 "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
@@ -180,6 +210,11 @@ export const organisationSearchList = [
         state: "MI",
         id: 7,
         cause: "Education",
+        secondaryCauses: [
+            "Humanitarian aid & development",
+            "Environment",
+            "Evangelism & missions",
+        ],
         contacts: {
             location:
                 "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
@@ -246,6 +281,11 @@ export const suggestedCharitiesOrganisations = [
         address: "14601 Peyton Dr Chino Hills, CA 91709",
         id: 8,
         cause: "Children's and youth ministry",
+        secondaryCauses: [
+            "Humanitarian aid & development",
+            "Environment",
+            "Evangelism & missions",
+        ],
         contacts: {
             location:
                 "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
@@ -266,6 +306,11 @@ export const suggestedCharitiesOrganisations = [
         address: "14601 Peyton Dr Chino Hills, CA 91709",
         id: 9,
         cause: "Education",
+        secondaryCauses: [
+            "Humanitarian aid & development",
+            "Environment",
+            "Evangelism & missions",
+        ],
         contacts: {
             location:
                 "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
@@ -285,7 +330,12 @@ export const suggestedCharitiesOrganisations = [
         state: "MI",
         address: "14601 Peyton Dr Chino Hills, CA 91709",
         id: 10,
-        cause: "Evangelism and missions",
+        cause: "Evangelism & missions",
+        secondaryCauses: [
+            "Humanitarian aid & development",
+            "Environment",
+            "Evangelism & missions",
+        ],
         contacts: {
             location:
                 "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
@@ -306,6 +356,11 @@ export const suggestedCharitiesOrganisations = [
         address: "14601 Peyton Dr Chino Hills, CA 91709",
         id: 11,
         cause: "Education",
+        secondaryCauses: [
+            "Humanitarian aid & development",
+            "Environment",
+            "Evangelism & missions",
+        ],
         contacts: {
             location:
                 "Chino valley community church \n14601 Peyton Dr \nChinohills, CA 91709",
