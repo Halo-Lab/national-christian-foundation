@@ -1,0 +1,19 @@
+.wrapper {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.video,
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.list {
+    list-style-type: disc;
+    padding-left: 24px;
+    max-width: 580px;
+}
