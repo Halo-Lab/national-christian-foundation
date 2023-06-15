@@ -21,4 +21,32 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity .2s ease-in;
+
+    &.active {
+        opacity: 1;
+    }
+}
+
+.controlsRow {
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 24px);
+    padding: 8px 16px;
+    bottom: 12px;
+    left: 12px;
+    position: absolute;
+    height: 40px;
+    background: #707070;
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: .2s ease-in;
+    transition-property: opacity, transform;
+
+    &.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
