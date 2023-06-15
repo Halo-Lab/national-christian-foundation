@@ -3,25 +3,25 @@ import Header from "./components/Header";
 import SidePanel from "./components/SidePanel";
 import Popup from "components/common/Popup";
 import HelpButton from "components/common/HelpButton";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CharityProfile from "pages/CharityProfile";
-
-const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <GrantPage />,
-    },
-    { path: "/charity-profile/:id", element: <CharityProfile /> },
-]);
 
 function App() {
     return (
         <div className="App">
             <SidePanel />
-            <main>
-                <Header />
-                <RouterProvider router={router} />
-            </main>
+            <BrowserRouter>
+                <main>
+                    <Header />
+                    <Routes>
+                        <Route exact path="/" element={<GrantPage />} />
+                        <Route
+                            path="/charity-profile/:id"
+                            element={<CharityProfile />}
+                        />
+                    </Routes>
+                </main>
+            </BrowserRouter>
             <Popup />
             <HelpButton />
         </div>
