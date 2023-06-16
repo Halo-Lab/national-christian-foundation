@@ -55,8 +55,15 @@
 
 .like {
     svg>path {
+        fill: #F0F2F3;
         transition: .2s ease-in;
         transition-property: stroke, fill;
         stroke: var(--blue-color);
+    }
+
+    &:hover {
+        svg>path {
+            fill: var(--blue-color);
+        }
     }
 }

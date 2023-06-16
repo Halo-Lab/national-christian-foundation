@@ -52,6 +52,7 @@ const VideoPlayer = ({ src, poster }) => {
                 onTimeUpdate={handleTimeUpdate}
                 controls={false}
                 poster={poster}
+                volume={0.5}
             />
             <VideoControls
                 isPlaying={isPlaying}
