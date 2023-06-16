@@ -71,7 +71,10 @@
 }
 
 .dropdownItem {
-    padding: 12px 24px;
+    padding: 12px 20px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
     transition: background-color .1s ease-in;
 
     &:hover {

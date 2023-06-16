@@ -12,7 +12,7 @@ import aceLogo from "assets/organisations-logo/ace.png";
 import jaretLogo from "assets/organisations-logo/jaret.png";
 import ncfVideo from "assets/videos/the-NCF-giving-fund.mp4";
 import ncfVideoPoster from "assets/ncf-video-placeholder.jpg";
-import caseyCrawfordVideo from "assets/videos/casey-crawford’s-story.mp4";
+import caseyCrawfordVideo from "assets/videos/casey-crawford-story.mp4";
 import caseyCrawfordVideoPoster from "assets/casey-video-placeholder.png";
 
 export const recentlySupportedOrganisations = [

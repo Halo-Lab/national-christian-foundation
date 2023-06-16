@@ -3,6 +3,7 @@ import styles from "./Dropdown.module.scss";
 import cn from "classnames";
 import ChevronDown from "assets/icons/ChevronDown";
 import useDropdown from "helpers/hooks/useDropdown";
+import Checkbox from "../Checkbox";
 
 const Dropdown = ({
     placeholder,
@@ -11,17 +12,21 @@ const Dropdown = ({
     setSelectedOption,
     alignment = "left",
 }) => {
-    const [selected, setSelected] = useState("");
+    const [selected, setSelected] = useState([]);
     const { isActive, toggleDropdown, dropdownRef } = useDropdown();
 
     const selectOption = (option) => {
-        setSelected(option);
-        setSelectedOption(option);
+        setSelected([...selected, option]);
+        // setSelectedOption([...selectedOption, option]);
     };
 
     useEffect(() => {
-        if (selected !== selectedOption) setSelected("");
-    }, [selectedOption, selected]);
+        console.log(selected);
+    }, [selected]);
+
+    // useEffect(() => {
+    //     if (selected !== selectedOption) setSelected("");
+    // }, [selectedOption, selected]);
 
     return (
         <div
@@ -33,10 +38,13 @@ const Dropdown = ({
                 className={cn(
                     "text-m grey",
                     styles.label,
-                    selected && styles.selected
+                    selected.length > 0 && styles.selected
                 )}
             >
-                {selected ? selected : placeholder}
+                {placeholder}{" "}
+                {selected.length > 0 && (
+                    <span className={styles.length}>{selected.length}</span>
+                )}
             </p>
             <div className={cn("icon", styles.icon)}>
                 <ChevronDown />
@@ -48,9 +56,8 @@ const Dropdown = ({
                         onClick={() => selectOption(el)}
                         key={index}
                     >
-                        <p className={cn("text-m", selected === el && "bold")}>
-                            {el}
-                        </p>
+                        <Checkbox initialState={selected === el} />
+                        <p className="text-m">{el}</p>
                     </li>
                 ))}
             </ul>

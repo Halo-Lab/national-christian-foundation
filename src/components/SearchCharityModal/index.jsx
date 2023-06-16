@@ -8,7 +8,7 @@ import FilterRow from "./FilterRow";
 
 const SearchCharityModal = ({ isModalActive, closeModal }) => {
     const [searchQuery, setSearchQuery] = useState("");
-    const [selectedOption, setSelectedOption] = useState();
+    const [selectedOption, setSelectedOption] = useState([]);
     const [isBottom, setIsBottom] = useState(false);
 
     const modalRef = useRef(null);
