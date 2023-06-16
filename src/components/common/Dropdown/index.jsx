@@ -9,6 +9,7 @@ const Dropdown = ({
     optionsList,
     selectedOption,
     setSelectedOption,
+    alignment = "left",
 }) => {
     const [selected, setSelected] = useState("");
     const { isActive, toggleDropdown, dropdownRef } = useDropdown();
@@ -40,7 +41,7 @@ const Dropdown = ({
             <div className={cn("icon", styles.icon)}>
                 <ChevronDown />
             </div>
-            <ul className={cn("dropdown", styles.dropdown)}>
+            <ul className={cn("dropdown", styles.dropdown, styles[alignment])}>
                 {optionsList.map((el, index) => (
                     <li
                         className={styles.dropdownItem}

@@ -35,6 +35,7 @@ const FilterRow = ({ selectedOption, setSelectedOption }) => {
                     optionsList={causesList}
                     selectedOption={selectedOption}
                     setSelectedOption={setSelectedOption}
+                    alignment="right"
                 />
             </div>
         </div>

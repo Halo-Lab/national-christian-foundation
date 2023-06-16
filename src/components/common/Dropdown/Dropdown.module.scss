@@ -50,12 +50,24 @@
 }
 
 .dropdown {
-    width: 100%;
+    width: 330px;
     top: calc(100% + 4px);
-    left: 0;
     padding: 8px 0;
     position: absolute;
     z-index: 1;
+
+    &.left {
+        left: 0;
+    }
+
+    &.right {
+        right: 0;
+    }
+
+    &.center {
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 .dropdownItem {
