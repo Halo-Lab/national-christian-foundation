@@ -8,9 +8,12 @@ import FilterRow from "./FilterRow";
 
 const SearchCharityModal = ({ isModalActive, closeModal }) => {
     const [searchQuery, setSearchQuery] = useState("");
-    const [selectedOption, setSelectedOption] = useState([]);
+    const [filterOptions, setFilterOptions] = useState({
+        cities: [],
+        states: [],
+        causes: [],
+    });
     const [isBottom, setIsBottom] = useState(false);
-
     const modalRef = useRef(null);
 
     const handleSearch = (query) => {
@@ -63,13 +66,13 @@ const SearchCharityModal = ({ isModalActive, closeModal }) => {
                 <SearchBar onSearch={handleSearch} />
                 {!searchQuery && (
                     <FilterRow
-                        selectedOption={selectedOption}
-                        setSelectedOption={setSelectedOption}
+                        filterOptions={filterOptions}
+                        setFilterOptions={setFilterOptions}
                     />
                 )}
                 <CharitiesSearchList
                     query={searchQuery}
-                    selectedOption={selectedOption}
+                    filterOptions={filterOptions}
                 />
             </div>
             <div

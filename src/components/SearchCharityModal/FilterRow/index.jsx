@@ -3,7 +3,7 @@ import styles from "./FilterRow.module.scss";
 import { organisationSearchList } from "data/charityOrganisations";
 import { removeDuplicates } from "helpers/removeDuplicates";
 
-const FilterRow = ({ selectedOption, setSelectedOption }) => {
+const FilterRow = ({ filterOptions, setFilterOptions }) => {
     const causesList = removeDuplicates(
         organisationSearchList.map((el) => el.cause)
     );
@@ -14,6 +14,13 @@ const FilterRow = ({ selectedOption, setSelectedOption }) => {
         organisationSearchList.map((el) => el.state)
     );
 
+    const handleCityFilter = (newValue) =>
+        setFilterOptions({ ...filterOptions, cities: newValue });
+    const handleStateFilter = (newValue) =>
+        setFilterOptions({ ...filterOptions, states: newValue });
+    const handleCauseFilter = (newValue) =>
+        setFilterOptions({ ...filterOptions, causes: newValue });
+
     return (
         <div className={styles.wrapper}>
             <h4 className="title-h4">Browse</h4>
@@ -21,21 +28,18 @@ const FilterRow = ({ selectedOption, setSelectedOption }) => {
                 <Dropdown
                     placeholder="City"
                     optionsList={citiesList}
-                    selectedOption={selectedOption}
-                    setSelectedOption={setSelectedOption}
+                    setFilterOptions={handleCityFilter}
                 />
                 <Dropdown
                     placeholder="State"
                     optionsList={statesList}
-                    selectedOption={selectedOption}
-                    setSelectedOption={setSelectedOption}
+                    setFilterOptions={handleStateFilter}
                 />
                 <Dropdown
                     placeholder="Cause"
                     optionsList={causesList}
-                    selectedOption={selectedOption}
-                    setSelectedOption={setSelectedOption}
                     alignment="right"
+                    setFilterOptions={handleCauseFilter}
                 />
             </div>
         </div>

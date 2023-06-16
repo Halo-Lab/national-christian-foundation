@@ -9,9 +9,8 @@ import DropdownItemWithCheckbox from "./DropdownItemWithCheckbox";
 const Dropdown = ({
     placeholder,
     optionsList,
-    selectedOption,
-    setSelectedOption,
     alignment = "left",
+    setFilterOptions,
 }) => {
     const [selected, setSelected] = useState([]);
     const { isActive, toggleDropdown, dropdownRef } = useDropdown();
@@ -20,18 +19,18 @@ const Dropdown = ({
         if (selected.includes(option)) {
             const updatedOptions = selected.filter((el) => el !== option);
             setSelected(updatedOptions);
-        } else setSelected([...selected, option]);
+            setFilterOptions(updatedOptions);
+        } else {
+            const updatedOptions = [...selected, option];
+            setFilterOptions(updatedOptions);
+            setSelected(updatedOptions);
+        }
     };
 
-    const resetOptions = () => setSelected([]);
-
-    // useEffect(() => {
-    //     console.log(selected);
-    // }, [selected]);
-
-    // useEffect(() => {
-    //     if (selected !== selectedOption) setSelected("");
-    // }, [selectedOption, selected]);
+    const resetOptions = () => {
+        setSelected([]);
+        setFilterOptions([]);
+    };
 
     return (
         <div
