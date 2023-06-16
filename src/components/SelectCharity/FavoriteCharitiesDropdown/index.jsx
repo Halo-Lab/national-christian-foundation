@@ -1,33 +1,15 @@
-import { useRef, useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "./FavoriteCharitiesDropdown.module.scss";
 import cn from "classnames";
 import ChevronDown from "assets/icons/ChevronDown";
 import Transfer from "assets/icons/Transfer";
 import { useOrganisationContext } from "context";
+import useDropdown from "helpers/hooks/useDropdown";
 
 const FavoriteCharitiesDropdown = ({ organisationsList }) => {
     const { setSelectedOrganisation } = useOrganisationContext();
-    const [isActive, setIsActive] = useState(false);
     const [isSorted, setIsSorted] = useState(false);
-    const dropdownRef = useRef(null);
-
-    useEffect(() => {
-        const handleMissClick = (event) => {
-            if (
-                dropdownRef.current &&
-                !dropdownRef.current.contains(event.target)
-            )
-                setIsActive(false);
-        };
-
-        document.addEventListener("click", handleMissClick);
-
-        return () => {
-            document.removeEventListener("click", handleMissClick);
-        };
-    }, []);
-
-    const toggleDropdown = () => setIsActive(true);
+    const { isActive, toggleDropdown, dropdownRef } = useDropdown();
 
     const sortOrganisationsByName = (e) => {
         e.stopPropagation();

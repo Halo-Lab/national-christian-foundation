@@ -1,7 +1,8 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Dropdown.module.scss";
 import cn from "classnames";
 import ChevronDown from "assets/icons/ChevronDown";
+import useDropdown from "helpers/hooks/useDropdown";
 
 const Dropdown = ({
     placeholder,
@@ -9,32 +10,13 @@ const Dropdown = ({
     selectedOption,
     setSelectedOption,
 }) => {
-    const [isActive, setIsActive] = useState(false);
     const [selected, setSelected] = useState("");
-    const dropdownRef = useRef(null);
-
-    const toggleDropdown = () => setIsActive(!isActive);
+    const { isActive, toggleDropdown, dropdownRef } = useDropdown();
 
     const selectOption = (option) => {
         setSelected(option);
         setSelectedOption(option);
     };
-
-    useEffect(() => {
-        const handleMissClick = (event) => {
-            if (
-                dropdownRef.current &&
-                !dropdownRef.current.contains(event.target)
-            )
-                setIsActive(false);
-        };
-
-        document.addEventListener("click", handleMissClick);
-
-        return () => {
-            document.removeEventListener("click", handleMissClick);
-        };
-    }, []);
 
     useEffect(() => {
         if (selected !== selectedOption) setSelected("");

@@ -1,30 +1,12 @@
 import styles from "./NotificationButton.module.scss";
 import cn from "classnames";
 import Bell from "assets/icons/Bell";
-import { useState, useEffect, useRef } from "react";
 import NotificationDropdown from "../NotificationDropdown";
+import useDropdown from "helpers/hooks/useDropdown";
 
 const NotificationButton = () => {
-    const [isDropdownActive, setIsDropdownActive] = useState(false);
-    const dropdownRef = useRef(null);
-
-    const toggleDropdown = () => setIsDropdownActive(!isDropdownActive);
-
-    useEffect(() => {
-        const handleMissClick = (event) => {
-            if (
-                dropdownRef.current &&
-                !dropdownRef.current.contains(event.target)
-            )
-                setIsDropdownActive(false);
-        };
-
-        document.addEventListener("click", handleMissClick);
-
-        return () => {
-            document.removeEventListener("click", handleMissClick);
-        };
-    }, []);
+    const { isActive, setIsActive, toggleDropdown, dropdownRef } =
+        useDropdown();
 
     return (
         <div className={styles.wrapper} ref={dropdownRef}>
@@ -35,8 +17,8 @@ const NotificationButton = () => {
                 <Bell />
             </button>
             <NotificationDropdown
-                isDropdownActive={isDropdownActive}
-                setIsDropdownActive={setIsDropdownActive}
+                isDropdownActive={isActive}
+                setIsDropdownActive={setIsActive}
             />
         </div>
     );
