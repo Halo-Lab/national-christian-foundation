@@ -2,7 +2,7 @@ import styles from "./NotificationButton.module.scss";
 import cn from "classnames";
 import Bell from "assets/icons/Bell";
 import NotificationDropdown from "../NotificationDropdown";
-import useDropdown from "helpers/hooks/useDropdown";
+import useDropdown from "hooks/useDropdown";
 
 const NotificationButton = () => {
     const { isActive, setIsActive, toggleDropdown, dropdownRef } =

@@ -2,9 +2,10 @@ import { useState } from "react";
 import styles from "./Dropdown.module.scss";
 import cn from "classnames";
 import ChevronDown from "assets/icons/ChevronDown";
-import useDropdown from "helpers/hooks/useDropdown";
+import useDropdown from "hooks/useDropdown";
 import Button from "../Button";
 import DropdownItemWithCheckbox from "./DropdownItemWithCheckbox";
+import { getStateFullName } from "helpers/getStateFullName";
 
 const Dropdown = ({
     placeholder,
@@ -70,7 +71,11 @@ const Dropdown = ({
                     {optionsList.map((option, index) => (
                         <DropdownItemWithCheckbox
                             onClick={() => addOption(option)}
-                            option={option}
+                            option={
+                                placeholder.toLowerCase() === "state"
+                                    ? `${getStateFullName(option)} - ${option}`
+                                    : option
+                            }
                             selectedLength={selected.length}
                             key={index}
                         />

@@ -3,7 +3,7 @@ import cn from "classnames";
 import ChevronDown from "../../../assets/icons/ChevronDown";
 import ProfileDropdown from "components/Header/ProfileDropdown";
 import UserAvatar from "components/Header/UserAvatar";
-import useDropdown from "helpers/hooks/useDropdown";
+import useDropdown from "hooks/useDropdown";
 
 const ProfileInfo = () => {
     const { isActive, toggleDropdown, dropdownRef } = useDropdown();

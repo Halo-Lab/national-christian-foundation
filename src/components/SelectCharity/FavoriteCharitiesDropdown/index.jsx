@@ -4,7 +4,7 @@ import cn from "classnames";
 import ChevronDown from "assets/icons/ChevronDown";
 import Transfer from "assets/icons/Transfer";
 import { useOrganisationContext } from "context";
-import useDropdown from "helpers/hooks/useDropdown";
+import useDropdown from "hooks/useDropdown";
 
 const FavoriteCharitiesDropdown = ({ organisationsList }) => {
     const { setSelectedOrganisation } = useOrganisationContext();

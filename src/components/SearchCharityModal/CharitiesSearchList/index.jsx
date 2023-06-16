@@ -48,7 +48,9 @@ const CharitiesSearchList = ({ query, filterOptions }) => {
         <>
             {filteredList.length > 0 ? (
                 <>
-                    <h4 className="title-h4">Search result</h4>
+                    {query !== "" && (
+                        <h4 className="title-h4">Search result</h4>
+                    )}
                     <ul className={styles.list}>
                         {filteredList.map((organisation, index) => (
                             <CharitiesSearchItem
