@@ -8,12 +8,15 @@
     display: flex;
     flex-direction: column;
 
-    >:first-child {
-        margin-left: 28px;
-    }
-
     >:last-child {
         margin-top: auto;
         align-self: center;
     }
+}
+
+.logo {
+    margin-left: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }

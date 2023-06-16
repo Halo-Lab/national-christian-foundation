@@ -1,4 +1,4 @@
-const Logo = () => {
+const FaithfulLogo = () => {
     return (
         <svg
             width="80"
@@ -44,4 +44,4 @@ const Logo = () => {
     );
 };
 
-export default Logo;
+export default FaithfulLogo;
