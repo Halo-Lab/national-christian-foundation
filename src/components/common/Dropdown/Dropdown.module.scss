@@ -40,6 +40,12 @@
     }
 }
 
+.label {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
 .icon {
     transition: transform .2s ease-in;
@@ -70,6 +76,10 @@
     }
 }
 
+.resetBtn {
+    padding: 13px 20px;
+}
+
 .dropdownItem {
     padding: 12px 20px;
     display: flex;
@@ -80,4 +90,13 @@
     &:hover {
         background-color: rgba(240, 242, 243, 0.5);
     }
+}
+
+.length {
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #F0F2F3;
 }

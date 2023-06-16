@@ -15,19 +15,19 @@ const CharitiesSearchList = ({ query, selectedOption }) => {
             : filterOrganisationsByQuery(query);
     }, [query]);
 
-    useEffect(() => {
-        if (selectedOption) {
-            setFilteredList([...filterBySelectedOption(selectedOption)]);
-        }
-    }, [selectedOption]);
+    // useEffect(() => {
+    //     if (selectedOption) {
+    //         setFilteredList([...filterBySelectedOption(selectedOption)]);
+    //     }
+    // }, [selectedOption]);
 
-    const filterBySelectedOption = (option) =>
-        organisationSearchList.filter(
-            (organisation) =>
-                organisation.category === option ||
-                organisation.city === option ||
-                organisation.state === option
-        );
+    // const filterBySelectedOption = (option) =>
+    //     organisationSearchList.filter(
+    //         (organisation) =>
+    //             organisation.category === option ||
+    //             organisation.city === option ||
+    //             organisation.state === option
+    //     );
 
     const filterOrganisationsByQuery = (query) => {
         setFilteredList(

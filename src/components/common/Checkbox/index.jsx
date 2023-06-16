@@ -12,6 +12,7 @@ const Checkbox = ({ label, initialState }) => {
         <div className={cn("cta", styles.wrapper)} onClick={toggleCheckbox}>
             <label className={cn(styles.label, isChecked && styles.checked)}>
                 <input
+                    value={isChecked}
                     className={cn("cta", styles.input)}
                     type="checkbox"
                     checked={isChecked}
