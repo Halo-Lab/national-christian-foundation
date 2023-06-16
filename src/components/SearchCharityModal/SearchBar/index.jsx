@@ -25,6 +25,7 @@ const SearchBar = ({ onSearch }) => {
                 icon={<Search />}
                 placeholder="Search"
                 value={query}
+                id="search"
             />
             {query && (
                 <div

@@ -26,6 +26,7 @@ const GrantDetails = () => {
                     value={amountValue}
                     placeholder="Available balance: $123,456.00"
                     onInputChange={amountInputChange}
+                    id="amount"
                 />
             </div>
             <div className={styles.frequency}>
