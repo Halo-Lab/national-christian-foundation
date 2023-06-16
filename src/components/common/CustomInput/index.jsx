@@ -11,7 +11,6 @@ const CustomInput = ({
     id,
 }) => {
     const [inputValue, setInputValue] = useState("");
-    const [isFocused, setIsFocused] = useState(false);
 
     useEffect(() => setInputValue(value), [value]);
 
@@ -22,7 +21,7 @@ const CustomInput = ({
     };
 
     return (
-        <label className={cn("cta", styles.label, isFocused && styles.focused)}>
+        <div className={styles.wrapper}>
             {icon && <div className="icon">{icon}</div>}
             <input
                 className={cn("text-m", styles.input)}
@@ -32,10 +31,9 @@ const CustomInput = ({
                 onChange={handleInputChange}
                 id={id}
                 autoComplete="off"
-                onFocus={() => setIsFocused(true)}
-                onBlur={() => setIsFocused(false)}
             />
-        </label>
+            <label htmlFor={id} className={cn("cta", styles.label)}></label>
+        </div>
     );
 };
 

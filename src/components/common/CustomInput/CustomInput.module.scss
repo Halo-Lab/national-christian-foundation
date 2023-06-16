@@ -1,16 +1,24 @@
-.label {
+.wrapper {
     padding: 14px 20px;
     display: flex;
     gap: 8px;
     align-items: center;
+    position: relative;
+
+    &:hover.label {
+        border-color: #ABB9BF;
+    }
+}
+
+.label {
     border-radius: 16px;
     border: 1px solid #D8DDE0;
     transition: border-color .2s;
-
-    &:hover,
-    &.focused {
-        border-color: #ABB9BF;
-    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .input {
@@ -20,5 +28,9 @@
     &::-webkit-inner-spin-button {
         -webkit-appearance: none;
         margin: 0;
+    }
+
+    &:focus+.label {
+        border-color: #ABB9BF;
     }
 }
