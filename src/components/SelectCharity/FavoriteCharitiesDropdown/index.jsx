@@ -39,7 +39,9 @@ const FavoriteCharitiesDropdown = ({ organisationsList }) => {
             <p className={cn("text-m grey", styles.placeholder)}>
                 My favorite charities
             </p>
-            <ChevronDown />
+            <div className={cn("icon", styles.chevron)}>
+                <ChevronDown />
+            </div>
             <div className={cn("dropdown", styles.dropdown)}>
                 <div className={styles.btnWrapper}>
                     <button

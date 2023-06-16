@@ -10,14 +10,6 @@
     justify-content: space-between;
     transition: border-color .15s;
 
-    >svg {
-        transition: transform .2s ease-in;
-
-        >path {
-            transition: stroke .2s ease-in;
-        }
-    }
-
     &.active,
     &:hover {
         border-color: #BEC9D6;
@@ -25,20 +17,30 @@
         >.placeholder {
             color: var(--text-color);
         }
+
+        >.chevron>svg>path {
+            stroke: var(--blue-color);
+        }
     }
 
     &.active {
-        >svg {
+        .chevron>svg {
             transform: rotate(180deg);
-
-            >path {
-                stroke: var(--blue-color);
-            }
         }
 
         .dropdown {
             opacity: 1;
             pointer-events: all;
+        }
+    }
+}
+
+.chevron {
+    >svg {
+        transition: transform .2s ease-in;
+
+        >path {
+            transition: stroke .15s ease-in;
         }
     }
 }
