@@ -20,9 +20,9 @@ const Dropdown = ({
         // setSelectedOption([...selectedOption, option]);
     };
 
-    useEffect(() => {
-        console.log(selected);
-    }, [selected]);
+    // useEffect(() => {
+    //     console.log(selected);
+    // }, [selected]);
 
     // useEffect(() => {
     //     if (selected !== selectedOption) setSelected("");
