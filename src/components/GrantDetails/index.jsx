@@ -11,6 +11,7 @@ const GrantDetails = () => {
     const [amountValue, setAmountValue] = useState("");
     const [grantFrequency, setGrantFrequency] = useState("single");
     const [timing, setTiming] = useState("asap");
+    const [isAnonymous, setIsAnonumous] = useState(false);
 
     const amountInputChange = (value) => setAmountValue(value);
 
@@ -67,7 +68,11 @@ const GrantDetails = () => {
             </div>
             <div className={styles.privacy}>
                 <h6 className="text-m bold">Privacy</h6>
-                <Checkbox label="Make this grant anonymous?" />
+                <Checkbox
+                    label="Make this grant anonymous?"
+                    isChecked={isAnonymous}
+                    onChange={() => setIsAnonumous(!isAnonymous)}
+                />
             </div>
         </div>
     );

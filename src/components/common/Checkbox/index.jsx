@@ -1,22 +1,16 @@
-import { useState } from "react";
 import cn from "classnames";
 import styles from "./Checkbox.module.scss";
 import Checked from "assets/icons/Checked";
 
-const Checkbox = ({ label, initialState }) => {
-    const [isChecked, setIsChecked] = useState(initialState);
-
-    const toggleCheckbox = () => setIsChecked(!isChecked);
-
+const Checkbox = ({ label, isChecked, onChange }) => {
     return (
-        <div className={cn("cta", styles.wrapper)} onClick={toggleCheckbox}>
+        <div className={cn("cta", styles.wrapper)} onClick={onChange}>
             <label className={cn(styles.label, isChecked && styles.checked)}>
                 <input
-                    value={isChecked}
                     className={cn("cta", styles.input)}
                     type="checkbox"
                     checked={isChecked}
-                    onChange={toggleCheckbox}
+                    onChange={onChange}
                 />
                 {isChecked && <Checked />}
             </label>

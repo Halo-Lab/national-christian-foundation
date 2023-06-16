@@ -1,10 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "./Dropdown.module.scss";
 import cn from "classnames";
 import ChevronDown from "assets/icons/ChevronDown";
 import useDropdown from "helpers/hooks/useDropdown";
-import Checkbox from "../Checkbox";
 import Button from "../Button";
+import DropdownItemWithCheckbox from "./DropdownItemWithCheckbox";
 
 const Dropdown = ({
     placeholder,
@@ -68,16 +68,13 @@ const Dropdown = ({
                     </div>
                 )}
                 <ul className={styles.list}>
-                    {optionsList.map((el, index) => (
-                        <li
-                            className={styles.dropdownItem}
-                            onClick={() => addOption(el)}
+                    {optionsList.map((option, index) => (
+                        <DropdownItemWithCheckbox
+                            onClick={() => addOption(option)}
+                            option={option}
+                            selectedLength={selected.length}
                             key={index}
-                        >
-                            {selected.includes(el)}
-                            <Checkbox initialState={selected.includes(el)} />
-                            <p className="text-m">{el}</p>
-                        </li>
+                        />
                     ))}
                 </ul>
             </div>
