@@ -17,7 +17,7 @@ const CharityProfile = () => {
     const navigateToPrevPage = () => navigate(-1);
 
     return (
-        <div className={styles.wrapper}>
+        <>
             <Button
                 text="Back"
                 type="ghost"
@@ -37,7 +37,7 @@ const CharityProfile = () => {
                     />
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

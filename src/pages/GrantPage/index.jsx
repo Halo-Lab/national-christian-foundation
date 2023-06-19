@@ -10,7 +10,7 @@ import ButtonLink from "components/common/ButtonLink";
 
 const GrantPage = () => {
     return (
-        <div className={styles.wrapper}>
+        <>
             <GrantPageTabs />
             <div className={styles.container}>
                 <div className={styles.leftSide}>
@@ -27,7 +27,7 @@ const GrantPage = () => {
                     <SuggestedCharities />
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

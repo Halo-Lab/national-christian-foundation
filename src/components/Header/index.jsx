@@ -3,12 +3,15 @@ import styles from "./Header.module.scss";
 import ProfileInfo from "./ProfileInfo";
 import Search from "assets/icons/Search";
 import NotificationButton from "components/Header/NotificationButton";
+import useScroll from "hooks/useScroll";
+import cn from "classnames";
 
 const Header = () => {
     const location = useLocation();
+    const scrolled = useScroll();
 
     return (
-        <header className={styles.header}>
+        <header className={cn(styles.header, scrolled && styles.scrolled)}>
             <h3 className="title-h3">
                 {location.pathname === "/" ? "Send" : "Charity profile"}
             </h3>

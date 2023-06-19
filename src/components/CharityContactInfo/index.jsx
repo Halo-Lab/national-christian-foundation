@@ -10,7 +10,7 @@ const CharityContactInfo = ({ contacts }) => {
         <div className={cn("grant-bg", styles.wrapper)}>
             <h4 className="title-h4">Contact information</h4>
             <ul className={styles.contacts}>
-                <li className={styles.contactsItem}>
+                <li className={styles.location}>
                     <div className="icon">
                         <MapPin />
                     </div>

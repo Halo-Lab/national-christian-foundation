@@ -1,7 +1,6 @@
 @import './reset', './variables', './fonts';
 
 body {
-    background-color: var(--main-bg-color);
     overflow: hidden;
 }
 
@@ -12,10 +11,27 @@ body {
 .App {
     display: flex;
     overflow: hidden;
+}
 
-    >main {
-        min-width: 1255px;
-        width: 100%;
+.main {
+    min-width: 1255px;
+    background-color: var(--main-bg-color);
+    width: 100%;
+    border-top-left-radius: 32px;
+    transition: border-radius .1s ease-in;
+
+    &.scrolled {
+        border-top-left-radius: 0;
+    }
+}
+
+.scrollWrapper {
+    padding: 0 56px;
+    height: calc(100vh - 88px);
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
     }
 }
 

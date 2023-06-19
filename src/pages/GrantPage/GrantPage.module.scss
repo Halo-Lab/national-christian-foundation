@@ -1,13 +1,3 @@
-.wrapper {
-    padding: 8px 56px 0;
-    height: calc(100vh - 104px);
-    overflow-y: scroll;
-
-    &::-webkit-scrollbar {
-        display: none;
-    }
-}
-
 .container {
     margin: 32px 0 24px;
     display: flex;
