@@ -6,7 +6,7 @@ const AboutCharity = ({ organisation }) => {
     return (
         <div className={cn("grant-bg", styles.wrapper)}>
             <div className={styles.video}>
-                <h4 className="title-h4">Videos block</h4>
+                <h4 className="title-h4">Video block</h4>
                 <VideoPlayer src={organisation.video} />
             </div>
             <div className={styles.about}>

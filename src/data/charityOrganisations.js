@@ -11,9 +11,7 @@ import secondCvccLogo from "assets/organisations-logo/cvcc-2.png";
 import aceLogo from "assets/organisations-logo/ace.png";
 import jaretLogo from "assets/organisations-logo/jaret.png";
 import ncfVideo from "assets/videos/the-NCF-giving-fund.mp4";
-import ncfVideoPoster from "assets/ncf-video-placeholder.jpg";
 import caseyCrawfordVideo from "assets/videos/casey-crawford-story.mp4";
-import caseyCrawfordVideoPoster from "assets/casey-video-placeholder.png";
 
 export const recentlySupportedOrganisations = [
     {
@@ -63,7 +61,6 @@ export const organisationSearchList = [
         state: "MI",
         id: 1,
         video: caseyCrawfordVideo,
-        poster: caseyCrawfordVideoPoster,
         cause: "Children's and youth ministry",
         secondaryCauses: [
             "Humanitarian aid & development",
@@ -90,7 +87,6 @@ export const organisationSearchList = [
         state: "KY",
         id: 2,
         video: ncfVideo,
-        poster: ncfVideoPoster,
         cause: "Giving and generosity",
         secondaryCauses: [
             "Humanitarian aid & development",
@@ -117,7 +113,6 @@ export const organisationSearchList = [
         state: "MI",
         id: 3,
         video: caseyCrawfordVideo,
-        poster: caseyCrawfordVideoPoster,
         cause: "Education",
         secondaryCauses: [
             "Humanitarian aid & development",
@@ -144,7 +139,6 @@ export const organisationSearchList = [
         state: "MI",
         id: 4,
         video: ncfVideo,
-        poster: ncfVideoPoster,
         cause: "Spiritual development",
         secondaryCauses: [
             "Humanitarian aid & development",
@@ -171,7 +165,6 @@ export const organisationSearchList = [
         state: "DC",
         id: 5,
         video: caseyCrawfordVideo,
-        poster: caseyCrawfordVideoPoster,
         cause: "Evangelism & missions",
         secondaryCauses: [
             "Humanitarian aid & development",
@@ -199,7 +192,6 @@ export const organisationSearchList = [
         state: "MI",
         id: 6,
         video: ncfVideo,
-        poster: ncfVideoPoster,
         cause: "Children's and youth ministry",
         secondaryCauses: [
             "Humanitarian aid & development",
@@ -226,7 +218,6 @@ export const organisationSearchList = [
         state: "MI",
         id: 7,
         video: caseyCrawfordVideo,
-        poster: caseyCrawfordVideoPoster,
         cause: "Education",
         secondaryCauses: [
             "Humanitarian aid & development",
@@ -299,7 +290,6 @@ export const suggestedCharitiesOrganisations = [
         address: "14601 Peyton Dr Chino Hills, CA 91709",
         id: 8,
         video: ncfVideo,
-        poster: ncfVideoPoster,
         cause: "Children's and youth ministry",
         secondaryCauses: [
             "Humanitarian aid & development",
@@ -326,7 +316,6 @@ export const suggestedCharitiesOrganisations = [
         address: "14601 Peyton Dr Chino Hills, CA 91709",
         id: 9,
         video: caseyCrawfordVideo,
-        poster: caseyCrawfordVideoPoster,
         cause: "Education",
         secondaryCauses: [
             "Humanitarian aid & development",
@@ -353,7 +342,6 @@ export const suggestedCharitiesOrganisations = [
         address: "14601 Peyton Dr Chino Hills, CA 91709",
         id: 10,
         video: ncfVideo,
-        poster: ncfVideoPoster,
         cause: "Evangelism & missions",
         secondaryCauses: [
             "Humanitarian aid & development",
@@ -380,7 +368,6 @@ export const suggestedCharitiesOrganisations = [
         address: "14601 Peyton Dr Chino Hills, CA 91709",
         id: 11,
         video: caseyCrawfordVideo,
-        poster: caseyCrawfordVideoPoster,
         cause: "Education",
         secondaryCauses: [
             "Humanitarian aid & development",

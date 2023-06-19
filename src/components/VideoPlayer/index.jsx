@@ -11,6 +11,8 @@ const VideoPlayer = ({ src }) => {
     const [currentTime, setCurrentTime] = useState(0);
     const [duration, setDuration] = useState(0);
     const [volume, setVolume] = useState(1);
+    const [selectedQuality, setSelectedQuality] = useState("Auto");
+    const [playbackRate, setPlaybackRate] = useState(1);
 
     const togglePlay = () => setIsPlaying(!isPlaying);
 
@@ -39,6 +41,9 @@ const VideoPlayer = ({ src }) => {
     const handleMouseEnter = () => setIsMouseOver(true);
     const handleMouseLeave = () => setIsMouseOver(false);
 
+    const handlePlaybackRateChange = (newSpeed) => setPlaybackRate(newSpeed);
+    const handleQualityChange = (newQuality) => setSelectedQuality(newQuality);
+
     return (
         <div
             className={styles.wrapper}
@@ -50,11 +55,14 @@ const VideoPlayer = ({ src }) => {
                 width="100%"
                 height="100%"
                 controls={false}
+                loop
                 playing={isPlaying}
                 onProgress={handleTimeUpdate}
                 onDuration={handleDuration}
                 ref={playerRef}
                 volume={volume}
+                playbackRate={playbackRate}
+                config={{ file: { preload: "auto", quality: selectedQuality } }}
             />
             <VideoControls
                 isPlaying={isPlaying}
@@ -66,6 +74,10 @@ const VideoPlayer = ({ src }) => {
                 onSeek={handleSeek}
                 volume={volume}
                 handleVolumeChange={handleVolumeChange}
+                playbackRate={playbackRate}
+                handlePlaybackRateChange={handlePlaybackRateChange}
+                selectedQuality={selectedQuality}
+                handleQualityChange={handleQualityChange}
             />
         </div>
     );

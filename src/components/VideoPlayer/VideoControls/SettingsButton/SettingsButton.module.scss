@@ -1,0 +1,29 @@
+.button {
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 56px;
+
+    >svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    &:hover {
+        background-color: rgba(170, 170, 170, 0.3);
+    }
+}
+
+.dropdown {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 8px);
+    opacity: 0;
+    pointer-events: none;
+
+    &.active {
+        pointer-events: all;
+        opacity: 1;
+    }
+}

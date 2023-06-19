@@ -1,0 +1,52 @@
+.wrapper {
+    width: 164px;
+    padding: 4px 0;
+    background: #707070;
+    border-radius: 8px;
+    overflow: hidden;
+
+    p {
+        color: var(--white-color);
+    }
+}
+
+.settingItem {
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #707070;
+    transition: background-color .1s;
+
+    &:hover {
+        background-color: #AAAAAA;
+    }
+}
+
+.settingInfo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.title {
+    display: flex;
+    padding: 8px 16px;
+    border-bottom: 1px solid rgba(170, 170, 170, 0.5);
+
+    >p {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.chevron {
+    width: 16px;
+    height: 16px;
+    display: grid;
+    place-items: center;
+
+    >svg>path {
+        stroke: var(--white-color);
+    }
+}
