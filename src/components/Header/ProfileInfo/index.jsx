@@ -1,9 +1,9 @@
 import styles from "./ProfileInfo.module.scss";
 import cn from "classnames";
-import ChevronDown from "../../../assets/icons/ChevronDown";
 import ProfileDropdown from "components/Header/ProfileDropdown";
 import UserAvatar from "components/Header/UserAvatar";
 import useDropdown from "hooks/useDropdown";
+import FundDropdown from "../FundDropdown";
 
 const ProfileInfo = () => {
     const { isActive, toggleDropdown, dropdownRef } = useDropdown();
@@ -15,12 +15,7 @@ const ProfileInfo = () => {
 
     return (
         <div className={styles.wrapper}>
-            <div className={cn("cta", styles.fund)}>
-                <p className="text-m">The sample family fund</p>
-                <div className={cn("icon", styles.chevron)}>
-                    <ChevronDown />
-                </div>
-            </div>
+            <FundDropdown />
             <div
                 className={cn("cta", styles.profile)}
                 onClick={toggleDropdown}

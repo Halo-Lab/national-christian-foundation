@@ -1,0 +1,39 @@
+.wrapper {
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: var(--white-color);
+    transition: background-color .1s ease-in;
+    position: relative;
+
+    &:hover {
+        background-color: var(--dropdown-item-hover);
+    }
+}
+
+.infoRow {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.divider {
+    height: 16px;
+    width: 1px;
+    background-color: #D8DDE0;
+}
+
+.balance {
+    color: var(--blue-color);
+}
+
+.check {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    >svg>path {
+        stroke: var(--complete-color);
+    }
+}
