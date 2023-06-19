@@ -3,12 +3,11 @@ import { useState } from "react";
 import cn from "classnames";
 
 const GrantPageTabs = () => {
-    const [activeTab, setActiveTab] = useState("grant");
+    const [activeTab, setActiveTab] = useState("send");
 
     const tabs = [
-        { name: "grant", title: "Send a grant" },
+        { name: "send", title: "Send to a charity" },
         { name: "schedules", title: "Recurring schedules" },
-        { name: "history", title: "History" },
     ];
 
     return (

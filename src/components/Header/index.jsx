@@ -10,9 +10,7 @@ const Header = () => {
     return (
         <header className={styles.header}>
             <h3 className="title-h3">
-                {location.pathname === "/"
-                    ? "Grant to a charity"
-                    : "Charity profile"}
+                {location.pathname === "/" ? "Send" : "Charity profile"}
             </h3>
             <div className={styles.buttons}>
                 <button className="cta header-btn">
