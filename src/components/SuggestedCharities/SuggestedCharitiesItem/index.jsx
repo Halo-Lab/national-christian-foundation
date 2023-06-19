@@ -13,10 +13,7 @@ const SuggestedCharitiesItem = ({ organisation }) => {
                 />
             </div>
             <div className={styles.content}>
-                <Link
-                    to={`/charity-profile/${organisation.id}`}
-                    state={{ ...organisation }}
-                >
+                <Link to={`/charity-profile/${organisation.id}`}>
                     <div className={styles.text}>
                         <p className={cn("text-m bold", styles.name)}>
                             {organisation.name}

@@ -1,4 +1,4 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import styles from "./CharityProfile.module.scss";
 import CharityProfileInfo from "components/CharityProfileInfo";
 import CharityContactInfo from "components/CharityContactInfo";
@@ -6,9 +6,12 @@ import CausesList from "components/CausesList";
 import AboutCharity from "components/AboutCharity";
 import Button from "components/common/Button";
 import ChevronLeft from "assets/icons/ChevronLeft";
+import { findItemById } from "helpers/findItemById";
+import { allOrganisations } from "data/charityOrganisations";
 
 const CharityProfile = () => {
-    const { state } = useLocation();
+    const { id } = useParams();
+    const organisation = findItemById(allOrganisations, id);
     const navigate = useNavigate();
 
     const navigateToPrevPage = () => navigate(-1);
@@ -23,14 +26,14 @@ const CharityProfile = () => {
             />
             <div className={styles.content}>
                 <div className={styles.leftSide}>
-                    <CharityProfileInfo organisation={state} />
-                    <AboutCharity organisation={state} />
+                    <CharityProfileInfo organisation={organisation} />
+                    <AboutCharity organisation={organisation} />
                 </div>
                 <div className={styles.rightSide}>
-                    <CharityContactInfo contacts={state.contacts} />
+                    <CharityContactInfo contacts={organisation.contacts} />
                     <CausesList
-                        primaryCause={state.cause}
-                        secondaryCauses={state.secondaryCauses}
+                        primaryCause={organisation.cause}
+                        secondaryCauses={organisation.secondaryCauses}
                     />
                 </div>
             </div>

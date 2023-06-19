@@ -400,3 +400,8 @@ export const suggestedCharitiesOrganisations = [
         },
     },
 ];
+
+export const allOrganisations = [
+    ...organisationSearchList,
+    ...suggestedCharitiesOrganisations,
+];

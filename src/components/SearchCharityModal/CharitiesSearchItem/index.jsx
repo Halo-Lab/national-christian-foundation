@@ -13,10 +13,7 @@ const CharitiesSearchItem = ({ organisation }) => {
                 <div className={styles.logo}>
                     <img src={organisation.logo} alt={organisation.name} />
                 </div>
-                <Link
-                    to={`/charity-profile/${organisation.id}`}
-                    state={{ ...organisation }}
-                >
+                <Link to={`/charity-profile/${organisation.id}`}>
                     <div className={cn("cta", styles.info)}>
                         <p className={cn("text-m", styles.name)}>
                             {organisation.name}
