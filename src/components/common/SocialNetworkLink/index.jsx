@@ -22,7 +22,12 @@ const SocialNetworkLink = ({ href, type }) => {
             logo = "social";
     }
     return (
-        <a className={cn("cta", styles.wrapper)} href={href} target="_blank">
+        <a
+            className={cn("cta", styles.wrapper)}
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+        >
             <img className={styles.logo} src={logo} alt={type + " logo"} />
         </a>
     );
