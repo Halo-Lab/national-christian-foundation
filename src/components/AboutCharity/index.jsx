@@ -7,10 +7,7 @@ const AboutCharity = ({ organisation }) => {
         <div className={cn("grant-bg", styles.wrapper)}>
             <div className={styles.video}>
                 <h4 className="title-h4">Videos block</h4>
-                <VideoPlayer
-                    src={organisation.video}
-                    poster={organisation.poster}
-                />
+                <VideoPlayer src={organisation.video} />
             </div>
             <div className={styles.about}>
                 <h4 className="title-h4">About us:</h4>

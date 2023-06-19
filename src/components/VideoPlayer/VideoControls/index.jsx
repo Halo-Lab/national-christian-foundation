@@ -3,10 +3,10 @@ import styles from "./VideoControls.module.scss";
 import Pause from "assets/icons/Pause";
 import Play from "assets/icons/Play";
 import Settings from "assets/icons/Settings";
-import Volume from "assets/icons/Volume";
 import cn from "classnames";
-import RangeInput from "../RangeInput";
+import RangeInput from "./RangeInput";
 import { transformSecToMin } from "helpers/transformSecToMin";
+import VolumeButton from "./VolumeButton";
 
 const VideoControls = ({
     togglePlay,
@@ -16,6 +16,8 @@ const VideoControls = ({
     currentTime,
     toggleFullScreen,
     onSeek,
+    volume,
+    handleVolumeChange,
 }) => {
     return (
         <>
@@ -30,7 +32,11 @@ const VideoControls = ({
                 <div className="icon">{isPlaying ? <Pause /> : <Play />}</div>
             </button>
             <div
-                className={cn(styles.controlsRow, isMouseOver && styles.active)}
+                className={cn(
+                    styles.controlsRow,
+                    styles.active
+                    // isMouseOver && styles.active
+                )}
             >
                 <div className={cn("cta", styles.play)} onClick={togglePlay}>
                     {isPlaying ? <Pause /> : <Play />}
@@ -42,9 +48,10 @@ const VideoControls = ({
                     onSeek={onSeek}
                 />
                 <p className="video-digits">{transformSecToMin(duration)}</p>
-                <div className={cn("cta", styles.controlIcon)}>
-                    <Volume />
-                </div>
+                <VolumeButton
+                    volume={volume}
+                    handleVolumeChange={handleVolumeChange}
+                />
                 <div className={cn("cta", styles.controlIcon)}>
                     <Settings />
                 </div>

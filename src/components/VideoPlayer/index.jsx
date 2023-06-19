@@ -1,39 +1,40 @@
 import { useRef, useState } from "react";
 import styles from "./VideoPlayer.module.scss";
 import VideoControls from "./VideoControls";
+import ReactPlayer from "react-player";
+import screenfull from "screenfull";
 
-const VideoPlayer = ({ src, poster }) => {
-    const videoRef = useRef(null);
+const VideoPlayer = ({ src }) => {
+    const playerRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
     const [isMouseOver, setIsMouseOver] = useState(false);
     const [currentTime, setCurrentTime] = useState(0);
+    const [duration, setDuration] = useState(0);
+    const [volume, setVolume] = useState(1);
 
-    const togglePlay = () => {
-        const video = videoRef.current;
-        if (video.paused) {
-            video.play();
-        } else {
-            video.pause();
+    const togglePlay = () => setIsPlaying(!isPlaying);
+
+    const openFullscreen = () => {
+        if (screenfull.isEnabled) {
+            screenfull.toggle(playerRef.current.wrapper);
         }
-        setIsPlaying(!isPlaying);
-    };
-
-    const toggleFullScreen = () => {
-        const video = videoRef.current;
-
-        if (video.requestFullscreen) video.requestFullscreen();
-        else if (video.mozRequestFullScreen) video.mozRequestFullScreen();
-        else if (video.webkitRequestFullscreen) video.webkitRequestFullscreen();
-        else if (video.msRequestFullscreen) video.msRequestFullscreen();
     };
 
     const handleSeek = (seekTime) => {
-        videoRef.current.currentTime = seekTime;
-        setCurrentTime(seekTime);
+        if (playerRef.current) {
+            playerRef.current.seekTo(seekTime);
+        }
     };
 
-    const handleTimeUpdate = () =>
-        setCurrentTime(videoRef.current?.currentTime);
+    const handleTimeUpdate = (progress) =>
+        setCurrentTime(progress.playedSeconds);
+
+    const handleDuration = (duration) => setDuration(duration);
+
+    const handleVolumeChange = (value) => {
+        const newVolume = parseFloat(value);
+        setVolume(newVolume);
+    };
 
     const handleMouseEnter = () => setIsMouseOver(true);
     const handleMouseLeave = () => setIsMouseOver(false);
@@ -44,25 +45,27 @@ const VideoPlayer = ({ src, poster }) => {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
-            <video
-                className={styles.video}
-                ref={videoRef}
-                src={src}
-                loop
-                onTimeUpdate={handleTimeUpdate}
+            <ReactPlayer
+                url={src}
+                width="100%"
+                height="100%"
                 controls={false}
-                poster={poster}
-                volume={0.5}
+                playing={isPlaying}
+                onProgress={handleTimeUpdate}
+                onDuration={handleDuration}
+                ref={playerRef}
+                volume={volume}
             />
             <VideoControls
                 isPlaying={isPlaying}
                 togglePlay={togglePlay}
                 isMouseOver={isMouseOver}
-                videoRef={videoRef}
                 currentTime={currentTime}
-                duration={videoRef.current?.duration}
-                toggleFullScreen={toggleFullScreen}
+                duration={duration}
+                toggleFullScreen={openFullscreen}
                 onSeek={handleSeek}
+                volume={volume}
+                handleVolumeChange={handleVolumeChange}
             />
         </div>
     );
