@@ -118,7 +118,7 @@
     transition: background-color .1s ease-in;
 
     &:hover {
-        background-color: rgba(240, 242, 243, 0.5);
+        background-color: var(--dropdown-item-hover);
     }
 
     >p {
