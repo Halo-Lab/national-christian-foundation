@@ -12,7 +12,7 @@ const SidePanel = () => {
             </div>
 
             <PagesList />
-            <Button text="Log Out" type="secondary" size="small" />
+            <Button text="Log out" type="secondary" size="small" />
         </div>
     );
 };
