@@ -8,6 +8,8 @@
     border-top-left-radius: 32px;
     transition: .1s ease-in;
     transition-property: background-color, padding, backdrop-filter, border-radius;
+    position: relative;
+    z-index: 5;
 
     &.scrolled {
         background-color: rgba(240, 242, 243, 0.85);
